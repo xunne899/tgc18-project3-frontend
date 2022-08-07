@@ -4,13 +4,13 @@
 
 * A brief layout of project work in different screen version
 
-![Web_view]()
+<!-- ![Web_view]() -->
 
 ### References
 
-- For more details of github frontend react interface please click [here]()
+- Github frontend react interface please click [here]()
 
-- For more details of github backend database please click [here]()
+- Github backend database please click [here]()
 
 # Content
 
@@ -30,9 +30,11 @@
 
 ### ERD
 
-![ERD]
+![ERD](./public/images/spices_erd.png)
 
-<!-- (./public/images/erd.png) -->
+### Schema
+
+![Schema Design](./public/images/schema.png)
 
 ## 2. UI/UX
 
@@ -65,7 +67,7 @@ Users are able to access to various applications through the navigation bar. The
 
 <br>
 
-![Web Structure]()
+![Web Structure](./public/images/project_web_layout_.png)
 
 ### 2.4 Skeleton
 
@@ -80,7 +82,7 @@ Navbar consists of logo, able to link to home page when on click and tab hyperli
 Body consists of the Main picture, Display content, Home link, Add Item link, Browse Search item link <br>
 Footer at the bottom page with copyright and font aswesome logo.<br>
 
-![Skeleton]()
+<!-- ![Skeleton]() -->
 
 ### 2.5 Surface
 
@@ -89,7 +91,7 @@ Footer at the bottom page with copyright and font aswesome logo.<br>
 - Background Colors: To promote a clean neat look which enable products to stand out<br>
 - Button Colors :<br>
 
-![Background Colours]()
+<!-- ![Background Colours]() -->
 
 #### 2.5.b Typography<br>
 
@@ -113,7 +115,7 @@ Footer at the bottom page with copyright and font aswesome logo.<br>
 
 Front-end
 
-1. Products on the home page
+1. Able to show Products on the home page
 2. Customer able to register and log in
 3. Customer able to Add, delete, update the cart
 4. Checkout and make payment
