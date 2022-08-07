@@ -1,70 +1,207 @@
-# Getting Started with Create React App
+# tgc18-project3-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Objective: Create a sauces and spices e-commerce website for customers with different background or dietry constraint
 
-## Available Scripts
+* A brief layout of project work in different screen version
 
-In the project directory, you can run:
+![Web_view]()
 
-### `npm start`
+### References
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- For more details of github frontend react interface please click [here]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- For more details of github backend database please click [here]()
 
-### `npm test`
+# Content
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Summary of project
+2. UX/UI
+3. Features
+4. User Stories
+5. Technologies Used
+6. Test Cases
+7. Live Deployment
+8. Credits and Acknowledgement
 
-### `npm run build`
+## 1. Summary
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Some customers with religion or dietry constraints are not able to access to spices or sauces available to them
+- In singapore i realised that there are not many e-commerce sauces and spice store cater to customers with dietry or religion constraints(eg. halal and vegan). As a owner of this project i would like to come up with an e-commerce store which allows customers to enjoy the freedom of purchasing spices and sauces regardless of their dietry contraints or background
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ERD
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![ERD]
 
-### `npm run eject`
+<!-- (./public/images/erd.png) -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2. UI/UX
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2.1 Scope
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The purpose of this project is to let public, mainly millennials young adults (21 years) to (45 years) to be aware that there is a site online which allows them to purchase spices and sauces regardless of their dietry constraints or background.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2.2 Strategy
 
-## Learn More
+- To create a e-commerce to allow customer's to purchase different spices and sauces from
+  webpage
+- For frontend of website , Consumers are able to register and log in, adding items to cart and eventually check out to payment page. For backend admin site, business is able to manage the order and notify customers when the order is ready to dispatch.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Allowing Owner's to add, edit,update, upload image and delete the spices and sauces in the admin backend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 2.2.a. User Goals
 
-### Code Splitting
+- Targeted Audience: Millennials young adults (21 years) to (45 years)
+- Users are able to find their desired spices and sauces
+- Interface of the website is user friendly, users able to login, navigate to their products with ease
+- Users are able to obtain ingredients information of the sauces and spices they are purchasing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 2.2.b. Organisation's Goals
 
-### Analyzing the Bundle Size
+- Able to provide a sauces and spices e-commerce website for customers with different background or dietry constraint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2.3 Structure
 
-### Making a Progressive Web App
+Users are able to access to various applications through the navigation bar. The image below shows a flowchart of how different features can be accessed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+![Web Structure]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 2.4 Skeleton
 
-### Deployment
+Webpage consists of simple 3 components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Navbar
+- Body
+- Footer
 
-### `npm run build` fails to minify
+Navbar is located at the top of webpage.<br>
+Navbar consists of logo, able to link to home page when on click and tab hyperlinks to respective pages.<br>
+Body consists of the Main picture, Display content, Home link, Add Item link, Browse Search item link <br>
+Footer at the bottom page with copyright and font aswesome logo.<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Skeleton]()
+
+### 2.5 Surface
+
+#### 2.5.a Background<br>
+
+- Background Colors: To promote a clean neat look which enable products to stand out<br>
+- Button Colors :<br>
+
+![Background Colours]()
+
+#### 2.5.b Typography<br>
+
+- Font Color :
+- Font Family:
+- Font Size : 0.6 - 4 rem, h1 to h5 to match with background settings
+
+#### 2.5.c Images<br>
+
+- Images : Different images used for the main page
+- Website is able to view in mobile size (XS) and for large display like desktop
+
+#### 2.5.c Icons<br>
+
+- Icons are used to differentiate the types of page
+-
+
+## 3. Features<br>
+
+### Key features
+
+Front-end
+
+1. Products on the home page
+2. Customer able to register and log in
+3. Customer able to Add, delete, update the cart
+4. Checkout and make payment
+5. Payment success notification
+
+Back-end (admin site)
+
+1. Admin/Staff/Owner able to log in/register
+2. Able to Create, update, delete products at the backend side
+3. Able to Process and Manage order
+
+## 4. User Stories
+
+1.
+2.
+3.
+
+### 4.1 Acceptance Criteria
+
+1. Webpage allows user's to search for their desire sauces and spices<br>
+2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their item with ease
+
+## 5. Technologies Used
+
+- HTML - styling, font size,form size, color
+- CSS - styling, font size,form size, color
+- React- frontend programming
+- Axios - importing data, posting data, HTTP client to endpoint
+- Bookshelf- backend database
+- SQL- backend database
+- Express Node JS- Backend programming
+- CORS
+- doteenv
+- Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
+- React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
+- Canva - creating logo brand
+- CSS loaders - loading logo for browse and collection page
+- SweetAlert2 - alert box for successfully deleted and added
+- Netlify - hosting my webpage project
+- Heroku - hosting backend project
+- createmockup - readme file, sample of different view layout
+- Github & Gitpod - storing respositories/project
+
+## 6. Testing
+
+### Test Cases
+
+#### PDF
+
+- Test case for each feature and its functionality can be found [here]().
+- Please download the file for better view
+
+#### Excel
+
+- Test case for each feature and its functionality can be found [here]().
+- Please download the file for better view
+
+### Mobile Responsiveness
+
+Responsiveness testing was done on Small handphones SE, Tablet, General Desktop and Laptop size.
+
+## 7. Live Deployment
+
+- Deployment is through Netlify for react frontend<br>
+  Link of live Netlify deployment can be found [here]()
+- Deployment is through heroku for backend database<br>
+  Link of live HEROKU deployment can be found [here]()
+
+## 8. Credits and Acknowledgement
+
+### Credits to:
+
+#### Web Source
+
+[Flaticon](https://www.flaticon.com/)(home page, delete icons for my project)<br>
+[Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)( features, listgroups,web features) <br>
+[color-hex.com](https://www.color-hex.com/color/)(background color scheme png in readme file)<br>
+[fontawesome.com](https://fontawesome.com/v5/icons/)(use of twitter, whatsapp, facebook, instagram icon for footer)<br>
+[Canva](https://www.canva.com)(creating logo brand)<br>
+[CSS loaders](https://cssloaders.github.io/)(loading logo for browse and collection page)<br>
+
+<!-- [SweetAlert2](https://sweetalert2.github.io/)(alert box for successfully deleted and added)<br> -->
+
+[React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards ,modal)<br>
+[createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)
+
+#### Mentors
+
+- Guidance from Paul Chor(Head Instructor)
+- Guidance from All Teaching Assistants
+- Guidance from Batch 18 Trent Global Coursemates
