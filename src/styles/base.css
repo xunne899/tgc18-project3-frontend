@@ -1,0 +1,50 @@
+
+body{
+  
+    overflow-x: hidden !important;
+}
+
+
+#MainHome{
+    position:relative;
+    background-image: url(../images/asian_spices.jpg);
+    background-size: cover;
+    width: auto;
+    height: 100vh; 
+    /* padding: 0;
+    margin: 0; */
+}
+
+#HomePageBox{
+text-shadow: 0 0  black;
+background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+/* padding-top: 80%;  */
+width:520px;
+height:210px;
+/* margin-top: 150px; */
+/* margin-left: 150px; */
+ position: absolute; 
+  top: 20%;
+ left: 35%;  
+/* right: 50%;  */
+
+}
+
+
+
+
+
+/* .heading{
+    display: flex;
+  align-items: center;
+}
+
+.sub-heading{
+    display: flex;
+  align-items: center;
+} */
