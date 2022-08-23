@@ -11,13 +11,13 @@ export default function HomePage() {
   function loadShopProducts(){
 
   }
-  
+
   return (
     <Fragment>
       <div id="MainHome">
         {/* <div className="row" > */}
         <div className="row mx-3" id="HomePageBox">
-          <h3 className="text-center">Your One-Stop Spice Solution</h3>
+          <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <p className="text-center">View our variety of spice selection below !</p>
         </div>
       </div>
