@@ -25,26 +25,49 @@ export default function NavBar() {
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <li class="nav-item">
-                <Link to class="nav-link ms-lg-3" aria-current="page" href="/">
-                  Shop
+                <Link class="nav-link ms-lg-3" aria-current="page" to="/">
+                  Home
                 </Link>
               </li>
-       
-              {/* <li class="nav-item">
-                <Link class="nav-link ms-lg-2" href="/shop">
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2" to="/about">
+                  About
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2" to="/shop">
                   Shop
                 </Link>
               </li>
               <li class="nav-item">
-                 <Link class="nav-link ms-lg-2 " href="/users">
-                  Users
-                </Link> 
-              </li> */}
+                <Link class="nav-link ms-lg-2" to="/cart">
+                  Cart
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2" to="/contact">
+                  Contact
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2 " to="/login">
+                  Login
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2 " to="/register">
+                  Register
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="nav-link ms-lg-2 " to="/logout">
+                  Logout
+                </Link>
+              </li>
             </div>
           </div>
         </div>
       </nav>
-
       {/* <HomePage/>  */}
       {/* </div> */}
     </Fragment>
