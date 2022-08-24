@@ -11,26 +11,29 @@ import ShoppingCart from "./pages/ShoppingCart";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
-import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 import Shop from "./pages/Shop";
+import UserProvider from "./providers/User";
 
 function App() {
   return (
     <React.Fragment>
       <Router>
-        <Navbar />
+        <UserProvider>
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<ShoppingCart />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-        </Routes>
-        {/* </nav> */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<ShoppingCart />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+          </Routes>
+          {/* </nav> */}
+        </UserProvider>
       </Router>
     </React.Fragment>
   );

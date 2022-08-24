@@ -50,15 +50,16 @@ export default function NavBar() {
                 </Link>
               </li>
               <li class="nav-item">
+                <Link class="nav-link ms-lg-2" to="/profile">
+                  Profile
+                </Link>
+              </li>
+              <li class="nav-item">
                 <Link class="nav-link ms-lg-2 " to="/login">
                   Login
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link ms-lg-2 " to="/register">
-                  Register
-                </Link>
-              </li>
+
               <li class="nav-item">
                 <Link class="nav-link ms-lg-2 " to="/logout">
                   Logout
