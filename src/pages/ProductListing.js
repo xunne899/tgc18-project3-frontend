@@ -18,8 +18,11 @@ export default function ProductListing() {
           products.length > 0 &&
           products.map((p) => (
             <li>
-              <img src={p.image_url} style={{ width: "100px" }} />
-              <Link to={"/product/" + p.id}>{p.name}</Link>
+              <img src={p.image_url} style={{ width: "100px" }} alt={""}/>
+              <div><Link to={"/product/" + p.id}>{p.name}</Link></div>
+              <div>{p.country.country}</div>
+              <div>{p.description}</div>
+           
             </li>
           ))}
       </ul>
