@@ -1,6 +1,7 @@
 import { Fragment, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../contexts/Product";
+import {Card, Button, Container, Row, Col} from "react-bootstrap";
 
 export default function ProductListing() {
   //const context = useContext(ProductContext);
@@ -11,21 +12,48 @@ export default function ProductListing() {
   }, []);
 
   return (
+
+
+    
     <Fragment>
-      <h1>Product Listings</h1>
-      <ul>
+       <Container>
+     
+        
+      <h1 className="text-center mt-3">Product Listings</h1>
+      <div className="row  d-flex justify-content-center col-sm col-md col-lg">
+      {/* <ul> */}
+        
         {products &&
           products.length > 0 &&
           products.map((p) => (
-            <li>
-              <img src={p.image_url} style={{ width: "100px" }} alt={""}/>
-              <div><Link to={"/product/" + p.id}>{p.name}</Link></div>
-              <div>{p.country.country}</div>
-              <div>{p.description}</div>
+            // <li>
+            //   <img src={p.image_url} style={{ width: "100px" }} alt={""}/>
+            //   <div><Link to={"/product/" + p.id}>{p.name}</Link></div>
+            //   <div>{p.country.country}</div>
+            //   <div>{p.description}</div>
            
-            </li>
+            // </li>
+
+            <Card className="m-3 mx-2 border-0 shadow-lg gx-0"style={{ width: '18rem' }}>
+                {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
+            <Card.Img  variant="top" src={p.image_url} style={{ width: "cover"}} alt={""} />
+            <Card.Body>
+              <Card.Title>{p.name}</Card.Title>
+              {/* <img src={p.image_url} style={{ width: "100px" }} alt={""}/> */}
+              <Card.Text className="mb-5">
+              {p.description}
+              </Card.Text>
+              <Button variant="dark" id="productButton"className="my-3 mt-5">More</Button>
+            </Card.Body>
+          </Card>
+        
           ))}
-      </ul>
+          
+      {/* </ul> */}
+      </div>
+      
+   
+      </Container>
     </Fragment>
   );
 }

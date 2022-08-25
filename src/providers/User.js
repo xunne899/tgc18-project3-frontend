@@ -5,7 +5,7 @@ import UserContext from "../contexts/User";
 export default function UserProvider(props) {
   const [pageIsLoaded, setPageIsLoaded] = useState(true);
   const [userInfo, setUserInfo] = useState({});
-  const baseUrl = "https://3001-xunne899-tgc18backendpr-5oflwjs1eph.ws-us62.gitpod.io/";
+  const baseUrl = "https://project3-spice-sauce.herokuapp.com/";
   const context = {
     getProfile: async () => {
       setPageIsLoaded(false);

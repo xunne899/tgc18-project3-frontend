@@ -21,7 +21,7 @@ export default function ProductDetails(props) {
       <h1>{product.product_name}</h1>
       <ul>
         <li>ID: {product.id}</li>
-        <li>Cost: {product.cost}</li>
+        <li>Ingredients: {product.ingredients}</li>
       </ul>
     </Fragment>
   );

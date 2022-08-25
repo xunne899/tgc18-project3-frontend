@@ -84,7 +84,11 @@ label {
 }
 
 
-
+#productButton{
+  position:absolute;
+  bottom:0;
+ 
+}
 
 /* .heading{
     display: flex;

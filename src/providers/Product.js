@@ -9,7 +9,7 @@ export default function ProductProvider(props) {
   const [products, setProducts] = useState([]);
   const userContext = useContext(UserContext);
   //userContext.userInfo.accessToken
-  const baseUrl = "https://3001-xunne899-tgc18backendpr-5oflwjs1eph.ws-us62.gitpod.io/";
+  const baseUrl = "https://project3-spice-sauce.herokuapp.com/";
 
   const context = {
     getProducts: async () => {
