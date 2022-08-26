@@ -8,8 +8,8 @@ export default function Shop() {
   return (
     <ProductProvider>
       <Routes>
-        <Route path="/" element={<ProductListing />} />
-        <Route path="/product/:product_id" element={<ProductDetails />} />
+        <Route path="/" element={<ProductListing/>} />
+        <Route path="/product/:product_id" element={<ProductDetails/>} />
       </Routes>
     </ProductProvider>
   );

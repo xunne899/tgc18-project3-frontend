@@ -9,7 +9,7 @@ export default function Profile() {
   }, []);
   return (
     <Fragment>
-      <h1>Profile</h1>
+      <h1 className="text-center mt-2">Profile</h1>
     </Fragment>
   );
 }

@@ -10,7 +10,9 @@ export default function ProductDetails(props) {
   const [product, setProduct] = useState({
     product_name: "",
   }); // store the product we are displaying
+  
   const context = useContext(ProductContext);
+  
   useEffect(() => {
     const product = context.getProductById(parseInt(productId));
     setProduct(product);

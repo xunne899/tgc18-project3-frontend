@@ -59,7 +59,6 @@ export default function NavBar() {
                   Login
                 </Link>
               </li>
-
               <li class="nav-item">
                 <Link class="nav-link ms-lg-2 " to="/logout">
                   Logout
@@ -67,6 +66,9 @@ export default function NavBar() {
               </li>
             </div>
           </div>
+          <span>
+            <i className="fas fa-cart-plus"></i>
+          </span>
         </div>
       </nav>
       {/* <HomePage/>  */}

@@ -63,6 +63,32 @@ export default function Login() {
     }
   };
 
+  // const [registerUserName, setRegUserName] = useState("");
+  // const [registerPassword, setRegPassword] = useState("");
+  // const [registerEmail, setRegEmail] = useState("");
+  // const [registerFullName, setRegFullName] = useState("");
+  // const [registerContact, setRegContact] = useState("");
+
+
+
+  const updateSignupFormField = (i) => {
+    if (i.target.name == "registerUserName") {
+      setRegUserName(i.target.value);
+    }
+    else if (i.target.name == "registerPassword") {
+      setRegPassword(i.target.value);
+    }
+    else if (i.target.name == "registerEmail") {
+      setRegEmail(i.target.value);
+    }
+    else if (i.target.name == "registerFullName") {
+      setRegFullName(i.target.value);
+    }
+    else if (i.target.name == "registerContact") {
+      setRegContact(i.target.value);
+    }
+  };
+
   if (authMode === "signin") {
     return (
       <div className="Auth-form-container">
@@ -71,7 +97,7 @@ export default function Login() {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary" onClick={changeAuthMode}>
+              <span className="link-secondary" onClick={changeAuthMode}>
                 Sign Up
               </span>
             </div>
@@ -100,7 +126,7 @@ export default function Login() {
               />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-dark">
                 Submit
               </button>
             </div>
@@ -126,24 +152,25 @@ export default function Login() {
           </div>
           <div className="form-group mt-3">
             <label>User Name</label>
-            <input type="text" className="form-control mt-1" placeholder="e.g Jane Doe" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Full Name</label>
-            <input type="text" className="form-control mt-1" placeholder="e.g Jane Doe" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Phone Number</label>
-            <input type="tel" className="form-control mt-1" placeholder="e.g Jane Doe" />
+            <input type="text" className="form-control mt-1" onChange={updateSignupFormField} placeholder="James89" />
           </div>
           <div className="form-group mt-3">
             <label>Email address</label>
-            <input type="email" className="form-control mt-1" placeholder="Email Address" />
+            <input type="email" className="form-control mt-1"  onChange={updateSignupFormField} placeholder="test89@gmail.com" />
           </div>
           <div className="form-group mt-3">
             <label>Password</label>
-            <input type="password" className="form-control mt-1" placeholder="Password" />
+            <input type="password" className="form-control mt-1"  onChange={updateSignupFormField} placeholder="******" />
           </div>
+          <div className="form-group mt-3">
+            <label>Full Name</label>
+            <input type="text" className="form-control mt-1" onChange={updateSignupFormField} placeholder="Jane Doe" />
+          </div>
+          <div className="form-group mt-3">
+            <label>Phone Number</label>
+            <input type="tel" className="form-control mt-1" onChange={updateSignupFormField} placeholder="97784568" />
+          </div>
+        
           <div className="d-grid gap-2 mt-3">
             <button type="submit" className="btn btn-primary">
               Submit
