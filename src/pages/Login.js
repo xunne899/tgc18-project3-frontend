@@ -97,7 +97,7 @@ export default function Login() {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-secondary" onClick={changeAuthMode}>
+              <span className="link-primary" onClick={changeAuthMode}>
                 Sign Up
               </span>
             </div>
@@ -125,7 +125,7 @@ export default function Login() {
                 placeholder="Enter password"
               />
             </div>
-            <div className="d-grid gap-2 mt-3">
+            <div className="d-grid gap-2 mt-3 mb-3">
               <button type="submit" className="btn btn-dark">
                 Submit
               </button>
@@ -171,8 +171,8 @@ export default function Login() {
             <input type="tel" className="form-control mt-1" onChange={updateSignupFormField} placeholder="97784568" />
           </div>
         
-          <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
+          <div className="d-grid gap-2 mt-3 mb-3">
+            <button type="submit" className="btn btn-dark">
               Submit
             </button>
           </div>

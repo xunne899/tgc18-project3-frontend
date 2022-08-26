@@ -12,6 +12,14 @@ export default function ProductDetails(props) {
   }); // store the product we are displaying
   
   const context = useContext(ProductContext);
+
+  // const { context, products, pageIsLoaded } = useContext(ProductContext);
+  
+  // useEffect(() => {
+  //   context.getProducts();
+  //   console.log(context);
+  // }, []);
+
   
   useEffect(() => {
     const product = context.getProductById(parseInt(productId));
@@ -20,10 +28,10 @@ export default function ProductDetails(props) {
 
   return (
     <Fragment>
-      <h1>{product.product_name}</h1>
+      <h1>{product.name}</h1>
       <ul>
         <li>ID: {product.id}</li>
-        <li>Ingredients: {product.ingredients}</li>
+        <li>Ingredients: {product.ingredient}</li>
       </ul>
     </Fragment>
   );

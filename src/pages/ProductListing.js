@@ -13,7 +13,7 @@ export default function ProductListing() {
   }, []);
 
 
- const spice = products.filter(product =>{
+const spice = products.filter(product =>{
   return(product.type.type ==="Spice")
  })
 
@@ -57,7 +57,7 @@ export default function ProductListing() {
               {p.description}
               </Card.Text>
 
-              <Button variant="dark" id="productButton"className="my-3 mt-5">More</Button>
+              <Link to={"/product/" + p.id}><Button variant="dark" id="productButton"className="my-3 mt-5">More</Button></Link>
             </Card.Body>
           </Card>
             
