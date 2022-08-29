@@ -14,25 +14,34 @@ import Logout from "./pages/Logout";
 import Profile from "./pages/Profile";
 import Shop from "./pages/Shop";
 import UserProvider from "./providers/User";
+import CartProvider from "./providers/Cart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import SessionPopup from "./components/SessionPopUp";
 
 function App() {
   return (
     <React.Fragment>
       <Router>
         <UserProvider>
-          <Navbar />
+          <CartProvider>
+            <Navbar />
 
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/shop" element={<Shop/>} />
-            <Route path="/cart" element={<ShoppingCart />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-          </Routes>
-          {/* </nav> */}
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/shop/*" element={<Shop />} />
+              <Route path="/cart" element={<ShoppingCart />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/logout" element={<Logout />} />
+            </Routes>
+            {/* </nav> */}
+            <ToastContainer />
+            <SessionPopup />
+          </CartProvider>
         </UserProvider>
       </Router>
     </React.Fragment>

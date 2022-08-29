@@ -46,9 +46,11 @@ export default function Login() {
     });
     if (res.status == 200) {
       //login successful
-      console.log(userInfo);
+    
+      // console.log(userInfo);
       // show successful register toaster
-      setAuthMode("signin");
+      // setAuthMode("signin");
+      routePage("/login");
     } else {
       //"Register Error"
     }
@@ -69,118 +71,117 @@ export default function Login() {
   // const [registerFullName, setRegFullName] = useState("");
   // const [registerContact, setRegContact] = useState("");
 
-
-
   const updateSignupFormField = (i) => {
     if (i.target.name == "registerUserName") {
       setRegUserName(i.target.value);
-    }
-    else if (i.target.name == "registerPassword") {
+    } else if (i.target.name == "registerPassword") {
       setRegPassword(i.target.value);
-    }
-    else if (i.target.name == "registerEmail") {
+    } else if (i.target.name == "registerEmail") {
       setRegEmail(i.target.value);
-    }
-    else if (i.target.name == "registerFullName") {
+    } else if (i.target.name == "registerFullName") {
       setRegFullName(i.target.value);
-    }
-    else if (i.target.name == "registerContact") {
+    } else if (i.target.name == "registerContact") {
       setRegContact(i.target.value);
     }
   };
 
   if (authMode === "signin") {
     return (
-      <div className="Auth-form-container">
-        <form className="Auth-form" onSubmit={handleLogin}>
-          <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
-            <div className="text-center">
-              Not registered yet?{" "}
-              <span className="link-primary" onClick={changeAuthMode}>
-                Sign Up
-              </span>
-            </div>
-            <div className="form-group mt-3">
-              <label>Email address</label>
-              <input
-                type="email"
-                id="loginEmail"
-                name="loginEmail"
-                onChange={updateLoginFormField}
-                value={userEmail}
-                className="form-control mt-1"
-                placeholder="Enter email"
-              />
-            </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                id="loginPassword"
-                name="loginPassword"
-                onChange={updateLoginFormField}
-                value={userPassword}
-                className="form-control mt-1"
-                placeholder="Enter password"
-              />
-            </div>
-            <div className="d-grid gap-2 mt-3 mb-3">
-              <button type="submit" className="btn btn-dark">
-                Submit
-              </button>
-            </div>
-            {/* <p className="text-center mt-2">
+      <div id="LoginHome">
+        <div className="Auth-form-container">
+          <form className="Auth-form" onSubmit={handleLogin}>
+            <div className="Auth-form-content">
+              <h3 className="Auth-form-title">Sign In</h3>
+              <div className="text-center">
+                Not registered yet?{" "}
+                <span className="link-primary" onClick={changeAuthMode}>
+                  Sign Up
+                </span>
+              </div>
+              <div className="form-group mt-3">
+                <label>Email address</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  name="loginEmail"
+                  onChange={updateLoginFormField}
+                  value={userEmail}
+                  className="form-control mt-1"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div className="form-group mt-3">
+                <label>Password</label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="loginPassword"
+                  onChange={updateLoginFormField}
+                  value={userPassword}
+                  className="form-control mt-1"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div className="d-grid gap-2 mt-3 mb-3">
+                <button type="submit" className="btn btn-dark">
+                  Submit
+                </button>
+              </div>
+              {/* <p className="text-center mt-2">
               Forgot <a href="#">password?</a>
             </p> */}
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="Auth-form-container">
-      <form className="Auth-form" onSubmit={handleRegister}>
-        <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
-          <div className="text-center">
-            Already registered?{" "}
-            <span className="link-primary" onClick={changeAuthMode}>
-              Sign In
-            </span>
-          </div>
-          <div className="form-group mt-3">
-            <label>User Name</label>
-            <input type="text" className="form-control mt-1" onChange={updateSignupFormField} placeholder="James89" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Email address</label>
-            <input type="email" className="form-control mt-1"  onChange={updateSignupFormField} placeholder="test89@gmail.com" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Password</label>
-            <input type="password" className="form-control mt-1"  onChange={updateSignupFormField} placeholder="******" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Full Name</label>
-            <input type="text" className="form-control mt-1" onChange={updateSignupFormField} placeholder="Jane Doe" />
-          </div>
-          <div className="form-group mt-3">
-            <label>Phone Number</label>
-            <input type="tel" className="form-control mt-1" onChange={updateSignupFormField} placeholder="97784568" />
-          </div>
-        
-          <div className="d-grid gap-2 mt-3 mb-3">
-            <button type="submit" className="btn btn-dark">
-              Submit
-            </button>
-          </div>
-          {/* <p className="text-center mt-2">
+    <div id="LoginHome">
+      <div className="Auth-form-container">
+        <form className="Auth-form" onSubmit={handleRegister}>
+          <div className="Auth-form-content">
+            <h3 className="Auth-form-title">Sign In</h3>
+            <div className="text-center">
+              Already registered?{" "}
+              <span className="link-primary" onClick={changeAuthMode}>
+                Sign In
+              </span>
+            </div>
+            <div className="form-group mt-3">
+              <label>UserName</label>
+              <input type="text" className="form-control mt-1"  value={registerUserName} name="registerUserName" onChange={updateSignupFormField} placeholder="eg.James89" />
+            </div>
+            <div className="form-group mt-3">
+              <label>Full Name</label>
+              <input type="text" className="form-control" value={registerFullName} name="registerFullName" onChange={updateSignupFormField} placeholder="eg.Jane Doe" />
+            </div>
+            <div className="form-group mt-3">
+              <label>Phone Number</label>
+              <input type="tel" className="form-control" value={registerContact} name="registerContact" onChange={updateSignupFormField} placeholder="eg.97784568" />
+            </div>
+            <div className="form-group mt-3">
+              <label>Email address</label>
+              <input type="email" className="form-control" value={registerEmail} name="registerEmail" onChange={updateSignupFormField} placeholder="eg.test89@gmail.com" />
+            </div>
+            <div className="form-group mt-3">
+              <label>Password</label>
+              <input type="password" className="form-control"  value={registerPassword} name="registerPassword" onChange={updateSignupFormField} placeholder="eg.******" />
+            </div>
+            <div className="d-grid gap-2 mt-3 mb-3">
+              <button type="submit" 
+              // onClick={() => setAuthMode("signin")} 
+              className="btn btn-dark">
+                Submit
+              </button>
+            </div>
+            {/* <p className="text-center mt-2">
             Forgot <a href="#">password?</a>
           </p> */}
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
   );
   // }
