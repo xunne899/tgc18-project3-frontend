@@ -116,7 +116,7 @@ export default function ContactUs() {
                                 <select className="form-select text-center mb-3" placeholder="---Select One---">
                                 <option value="0">---Select One---</option>
                                    <option value="1">Product Enquiry</option>
-                                    <option value="2">Order enquiry</option>
+                                    <option value="2">Order Enquiry</option>
                                     <option value="3">Feedback</option>
                                 </select>
                                 {/* <label className="text-center" style={{ height: "10px" }} >Type of Enquiry</label> */}

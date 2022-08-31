@@ -44,13 +44,23 @@ export default function Login() {
       password: registerPassword,
       name: registerFullName,
     });
-    if (res.status == 200) {
+
+    if (res.status == 201) {
       //login successful
-    
-      // console.log(userInfo);
-      // show successful register toaster
-      // setAuthMode("signin");
-      routePage("/login");
+
+      console.log("register =>", res);
+      setRegUserName("");
+
+      setRegPassword("");
+
+      setRegEmail("");
+
+      setRegFullName("");
+
+      setRegContact("");
+
+      setAuthMode("signin");
+      //routePage("/login");
     } else {
       //"Register Error"
     }
@@ -151,28 +161,65 @@ export default function Login() {
             </div>
             <div className="form-group mt-3">
               <label>UserName</label>
-              <input type="text" className="form-control mt-1"  value={registerUserName} name="registerUserName" onChange={updateSignupFormField} placeholder="eg.James89" />
+              <input
+                type="text"
+                className="form-control mt-1"
+                value={registerUserName}
+                name="registerUserName"
+                onChange={updateSignupFormField}
+                placeholder="eg.James89"
+              />
             </div>
             <div className="form-group mt-3">
               <label>Full Name</label>
-              <input type="text" className="form-control" value={registerFullName} name="registerFullName" onChange={updateSignupFormField} placeholder="eg.Jane Doe" />
+              <input
+                type="text"
+                className="form-control"
+                value={registerFullName}
+                name="registerFullName"
+                onChange={updateSignupFormField}
+                placeholder="eg.Jane Doe"
+              />
             </div>
             <div className="form-group mt-3">
               <label>Phone Number</label>
-              <input type="tel" className="form-control" value={registerContact} name="registerContact" onChange={updateSignupFormField} placeholder="eg.97784568" />
+              <input
+                type="tel"
+                className="form-control"
+                value={registerContact}
+                name="registerContact"
+                onChange={updateSignupFormField}
+                placeholder="eg.97784568"
+              />
             </div>
             <div className="form-group mt-3">
               <label>Email address</label>
-              <input type="email" className="form-control" value={registerEmail} name="registerEmail" onChange={updateSignupFormField} placeholder="eg.test89@gmail.com" />
+              <input
+                type="email"
+                className="form-control"
+                value={registerEmail}
+                name="registerEmail"
+                onChange={updateSignupFormField}
+                placeholder="eg.test89@gmail.com"
+              />
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
-              <input type="password" className="form-control"  value={registerPassword} name="registerPassword" onChange={updateSignupFormField} placeholder="eg.******" />
+              <input
+                type="password"
+                className="form-control"
+                value={registerPassword}
+                name="registerPassword"
+                onChange={updateSignupFormField}
+                placeholder="eg.******"
+              />
             </div>
             <div className="d-grid gap-2 mt-3 mb-3">
-              <button type="submit" 
-              // onClick={() => setAuthMode("signin")} 
-              className="btn btn-dark">
+              <button
+                type="submit"
+                // onClick={() => setAuthMode("signin")}
+                className="btn btn-dark"
+              >
                 Submit
               </button>
             </div>

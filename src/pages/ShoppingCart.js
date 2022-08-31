@@ -2,13 +2,17 @@ import React, { useContext } from "react";
 import UserContext from "../contexts/User";
 import CartContext from "../contexts/Cart";
 import CartItem from "../components/CartItem";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function ShoppingCart() {
-  const { cart, checkout } = useContext(CartContext);
+  const { cart, onCheckOutCart } = useContext(CartContext);
   const { userInfo } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const onCheckoutSubmit = () => {
-    checkout();
+    onCheckOutCart();
   };
 
   return !userInfo.accessToken ? (
@@ -22,24 +26,32 @@ export default function ShoppingCart() {
     </React.Fragment>
   ) : (
     <React.Fragment>
-      <div className="container-fluid py-4">
+      <div className="container-fluid py-4" style={{backgroundSize:"cover"}}>
         <div className="container content-container">
           <div className="h-100 rounded-3 shadow-lg border border-dark" style={{ width: "90%" }}>
             <div className="h-100 p-4">
               <div className="row d-flex justify-content-center align-items-center h-100">
                 <div className="col-12">
                   <h3 className="mb-3">Shopping Cart</h3>
-                  {cart.length === 0 ? <div>No items in cart</div> : cart?.map((c, i) => <React.Fragment key={i}>
-                    <CartItem c={c}/>
-                  </React.Fragment>)}
-                  <div className="d-flex justify-content-end me-3">
-                    <h4>Total: {cart?.reduce((sum, cartItem) => sum + cartItem.quantity * (cartItem.variants.cost / 100), 0).toFixed(2)}</h4>
-                  </div>
+                  {cart.length === 0 ? (
+                    <div>No items in cart</div>
+                  ) : (
+                    cart.map((eachItem, i) => (
+                      <React.Fragment key={`cartItem_${i}`}>
+                        <CartItem cartItem={eachItem} />
+                      </React.Fragment>
+                    ))
+                  )}
+                  <div className="d-flex justify-content-between">
                   <div className="custom-btn-group me-3">
-                    <button className="btn btn-dark btn-outline-light" onClick={onCheckoutSubmit}>
+                    <button className="btn btn-dark btn-outline-light"onClick={() => navigate("/shop")}>Continue Shopping</button>
+                    <button className="btn btn-dark btn-outline-light mx-2" onClick={onCheckoutSubmit}>
                       Checkout
                     </button>
                   </div>
+                  <h4>Total($): {cart?.reduce((totalPrice, eachItem) => totalPrice + eachItem.quantity * (eachItem.variant.cost / 100), 0).toFixed(2)}</h4>
+                  </div>
+
                 </div>
               </div>
             </div>

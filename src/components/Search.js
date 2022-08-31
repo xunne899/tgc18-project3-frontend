@@ -26,9 +26,9 @@ export default function SearchForm(props) {
 
   return (
     <Fragment>
-      <div className="accordion mt-4 mb-4" id="accordion">
-        <div className="accordion-item mx-4 shadow-lg">
-          <h2 className="accordion-header" id="headingOne">
+      <div className="accordion mt-5 mb-4" id="accordion">
+        <div className="accordion-item mx-lg-4 shadow-lg" >
+          <h2 className="accordion-header " id="headingOne">
             <button
               className="accordion-button collapsed"
               type="button"
@@ -37,8 +37,8 @@ export default function SearchForm(props) {
               aria-expanded="false"
               aria-controls="collapseOne"
             >
-              <span>
-                <i className="bi bi-search"></i> Search Filter
+              <span >
+                <i className="bi bi-search" ></i> Search Filter
               </span>
             </button>
           </h2>
@@ -50,9 +50,9 @@ export default function SearchForm(props) {
                 <p className="alert alert-danger">No results found.</p>
               )}
               <form className="row">
-                <div className="col-12 col-lg-12">
+                <div className="col-6 col-lg-6">
                   <div className="mt-3">
-                    <label className="text-muted">Name</label>
+                    <label >Name</label>
                     <input
                       id="name"
                       name="name"
@@ -64,7 +64,7 @@ export default function SearchForm(props) {
                     />
                   </div>
                   <div className="mt-3">
-                    <label className="text-muted">Min Shelf Life</label>
+                    <label>Min Shelf Life</label>
                     <input
                       id="minShelfLife"
                       name="min_shelf_life"
@@ -77,7 +77,7 @@ export default function SearchForm(props) {
                   </div>
 
                   <div className="mt-3">
-                    <label className="text-muted">Max Shelf Life</label>
+                    <label>Max Shelf Life</label>
                     <input
                       id="maxShelfLife"
                       name="max_shelf_life"
@@ -89,7 +89,7 @@ export default function SearchForm(props) {
                     />
                   </div>
                 </div>
-                <div className="col-12 col-lg-12">
+                <div className="col-6 col-lg-6">
                   <div className="mt-3">
                     <label>Type</label>
                     <select

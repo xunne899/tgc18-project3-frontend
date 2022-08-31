@@ -33,7 +33,9 @@ export default function ProductListing() {
   return (
     <Fragment>
       <Container>
+      
         {/* <h1 className="text-center mt-3">Product Listings</h1> */}
+ 
         <div className="row  d-flex justify-content-center col-sm col-md col-lg">
           {/* <ul> */}
           <SearchForm setSearchResult={setSearchResult} />
@@ -71,23 +73,16 @@ export default function ProductListing() {
 
           {/* </ul> */}
         </div>
+        
 
-        <div className="row  d-flex justify-content-center col-sm col-md col-lg">
+        <div className="row  d-flex justify-content-center col-sm col-md col-lg mb-4">
           {/* <ul> */}
 
           {products &&
             products.length > 0 &&
             //  products.type.type.value === 'spice' &&
             sauce.map((p, i) => (
-              // <li>.
-              //   <img src={p.image_url} style={{ width: "100px" }} alt={""}/>
-              //   <div><Link to={"/product/" + p.id}>{p.name}</Link></div>
-              //   <div>{p.country.country}</div>
-              //   <div>{p.description}</div>
-
-              // </li>
-
-              //  if(p.type.type === "Spice"){
+           
               <Card key={`sauce_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px" }}>
                 {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
                 <Card.Img variant="top" src={p.image_url} style={{ width: "cover" }} alt={""} />

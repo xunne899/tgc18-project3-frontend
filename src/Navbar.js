@@ -20,15 +20,65 @@ export default function NavBar() {
   const renderLoginTabs = () => {
     if (Object.keys(userInfo).length === 0) {
       return (
-        <li className="nav-item">
-          <Link className="nav-link ms-lg-2 " to="/login">
+        // <div className=" ">
+        <li className="nav-item me-lg-3 login mx-auto" >
+          <Link className="nav-link text-center" to="/login">
             Login
           </Link>
         </li>
+        // </div>
       );
     } else {
       return (
         <Fragment>
+          {/* <div class="row  "> */}
+          <div class="nav-item dropdown me-lg-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle personIcon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <a class="dropdown-item text-center" href="#">
+                  <Link className="nav-link ms-lg-2" to="/profile">
+                    Profile
+                  </Link>
+                </a>
+              </li>
+              {/* <div className="ms-auto d-flex justify-content-center me-lg-3"> */}
+              <li>
+                <a class="dropdown-item" href="#">
+                  <Link className=" nav-link " to="/cart">
+                    {/* <div className="cartWrap"> */}
+                    {renderCartBadge()}
+                    {/* <i className="bi-basket2 basketIcon"></i> */}
+                    Cart Item
+                    {/* </div> */}
+                  </Link>
+                </a>
+              </li>
+              {/* </div> */}
+              <li>
+                <a class="dropdown-item" href="#">
+                  <Link className="nav-link ms-lg-2" to="/order">
+                    Orders
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <Link className="nav-link ms-lg-2" to="/logout">
+                    Logout
+                  </Link>
+                </a>
+              </li>
+            </div>
+          </div>
+          {/* </div> */}
+          {/* <li className="nav-item">
+            <Link className="nav-link ms-lg-2" to="/order">
+              My Orders
+            </Link>
+          </li>
           <li className="nav-item">
             <Link className="nav-link ms-lg-2" to="/profile">
               Profile
@@ -39,7 +89,7 @@ export default function NavBar() {
             <Link className="nav-link ms-lg-2 " to="/logout">
               Logout
             </Link>
-          </li>
+          </li>  */}
         </Fragment>
       );
     }
@@ -47,7 +97,7 @@ export default function NavBar() {
   return (
     <Fragment>
       {/* <div> */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid">
           <a className="navbar-brand ms-3" href="#">
             <img id="navLogo" src={require("./images/newSpiceLogo.png")} style={{ width: "135px", height: "60px" }} />
@@ -64,24 +114,24 @@ export default function NavBar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <li className="nav-item">
+            <div className="navbar-nav ms-auto">
+              <li className="nav-item ">
                 <Link className="nav-link ms-lg-3" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link ms-lg-2" to="/about">
                   About
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link ms-lg-2" to="/shop">
                   Shop
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link ms-lg-2" to="/contact">
+                <Link className="nav-link ms-lg-2 me-lg-5" to="/contact">
                   Contact
                 </Link>
               </li>
@@ -107,14 +157,14 @@ export default function NavBar() {
               </li> */}
               {renderLoginTabs()}
             </div>
-            <div className="ms-auto d-flex justify-content-center me-lg-3">
+            {/* <div className="ms-auto d-flex justify-content-center me-lg-3">
               <Link className="ms-lg-2" to="/cart">
                 <div className="cartWrap">
                   {renderCartBadge()}
                   <i className="bi-basket2 basketIcon"></i>
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

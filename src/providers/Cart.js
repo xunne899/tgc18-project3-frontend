@@ -34,6 +34,7 @@ export default function CartProvider(props) {
       stripe.redirectToCheckout({ sessionId: checkoutResponse.sessionId });
     };
     if (Object.keys(checkoutResponse).length !== 0) {
+      console.log("Backend Checkout Response=>", checkoutResponse)
       stripeCheckout();
     }
   }, [checkoutResponse]);
@@ -81,8 +82,8 @@ export default function CartProvider(props) {
           {
             pending: "Adding to cart",
             success: "Successfully added to cart.",
-            position: "bottom-right",
-          }
+          },
+          { position: toast.POSITION.BOTTOM_RIGHT }
         );
         await getCart();
         // setTempVariant({
@@ -115,7 +116,7 @@ export default function CartProvider(props) {
       try {
         await toast.promise(
           axios.put(
-            `${baseUrl}/api/carts/${variantId}/quantity/update`,
+            `${baseUrl}/api/carts/${variantId}/update`,
             { newQuantity: newQuantity },
             {
               headers: {
@@ -169,7 +170,7 @@ export default function CartProvider(props) {
     }
   };
 
-  const checkout = async () => {
+  const onCheckOutCart = async () => {
     if (userInfo.accessToken && cart.length !== 0) {
       try {
         const response = await axios.get(`${baseUrl}/api/checkout`, {
@@ -191,7 +192,7 @@ export default function CartProvider(props) {
       toast.error("Please login to checkout", {
         toastId: "checkoutError",
       });
-      navigate("/users/login-register");
+      navigate("/login");
     }
   };
   // return cart provider
@@ -207,7 +208,7 @@ export default function CartProvider(props) {
         addToCart,
         updateCartItem,
         deleteCartItem,
-        checkout,
+        onCheckOutCart,
       }}
     >
       {props.children}
