@@ -30,7 +30,9 @@ export default function CartProvider(props) {
         pending: "Checking out cart",
         success: "Redirecting to Stripe",
         error: "Error checking out cart. Please try again later.",
-      });
+      },
+      { position: toast.POSITION.BOTTOM_RIGHT }
+      );
       stripe.redirectToCheckout({ sessionId: checkoutResponse.sessionId });
     };
     if (Object.keys(checkoutResponse).length !== 0) {

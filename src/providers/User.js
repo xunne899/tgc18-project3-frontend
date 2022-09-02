@@ -55,6 +55,7 @@ export default function UserProvider(props) {
     } catch (err) {
       toast.error("Previous session has expired, please re-login.", {
         toastId: "getUserError",
+        position: "bottom-right",
       });
       localStorage.clear();
       setUserInfo({});
