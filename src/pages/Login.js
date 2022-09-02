@@ -1,15 +1,48 @@
 import { Fragment, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import UserContext from "../contexts/User";
 
 export default function Login() {
-  const [userEmail, setUserName] = useState("");
+  //=====
+  // const navigate = useNavigate();
+  // const [formState, setFormState] = useState({
+  //     'username': '',
+  //     'email': '',
+  //     'address': '',
+  //     'password': '',
+  //     'confirm_password': ''
+  // })
+
+  // username: registerUserName,
+  //     contact_number: registerContact,
+  //     email: registerEmail,
+  //     password: registerPassword,
+  //     name:
+
+  // //login
+  // const [userEmail, setUserName] = useState("");
+  // const [userPassword, setUserPassword] = useState("");
+  // //register
+  // const [registerUserName, setRegUserName] = useState("");
+  // const [registerPassword, setRegPassword] = useState("");
+  // const [registerEmail, setRegEmail] = useState("");
+  // const [registerFullName, setRegFullName] = useState("");
+  // const [registerContact, setRegContact] = useState( "");
+
+  //login
+  const [userEmail, setEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  //register
   const [registerUserName, setRegUserName] = useState("");
   const [registerPassword, setRegPassword] = useState("");
+  const [registerConfirmPassword, setRegConfirmPassword] = useState("");
   const [registerEmail, setRegEmail] = useState("");
   const [registerFullName, setRegFullName] = useState("");
   const [registerContact, setRegContact] = useState("");
+
+  //---
+  // const [formFieldError, setformFieldError] = useState({})
 
   const [authMode, setAuthMode] = useState("signin");
   const { userInfo, pageIsLoaded, context } = useContext(UserContext);
@@ -22,54 +55,151 @@ export default function Login() {
     console.log("Login page");
   }, []);
 
+
+
+  // form validation
+  const [invalidName, setinvalidName] = useState(false);
+  const [invalidEmail, setinvalidEmail] = useState(false);
+  const [invalidContact, setinvalidContact] = useState(false);
+  const [invalidPassword, setinvalidPassword] = useState(false);
+  const [invalidConfirmPassword, setinvalidConfirmPassword] = useState(false);
+  const [invalidUserName, setinvalidUserName] = useState(false);
+  
+
   const handleLogin = async (event) => {
     event.preventDefault();
-    const res = await context.loginUser({ email: userEmail, password: userPassword });
-    if (res.status == 200) {
-      //login successful
-      console.log(userInfo);
-      routePage("/shop");
-    } else {
-      //"Login Error"
+
+    let errorCount = 0;
+    setinvalidEmail(false);
+    setinvalidPassword(false);
+
+    if (userEmail === "" || !userEmail.includes("@") || !userEmail.includes(".")) {
+      setinvalidEmail(true);
+      errorCount += 1;
     }
+
+    if (userPassword === "" || userPassword.length < 0 || userPassword.length > 20) {
+      setinvalidPassword(true);
+      errorCount += 1;
+    }
+
+    if (errorCount === 0) {
+      let res = await context.loginUser({
+        email: userEmail, password: userPassword })
+
+      if (res.status === 200) {
+        //login successful
+        setEmail("");
+
+        setUserPassword("");
+        // console.log("register =>", res);
+        routePage("/shop");
+        //routePage("/login");
+      }
+    }
+
     //alert(`Login: ${userEmail}`);
   };
 
+
+
+
   const handleRegister = async (event) => {
+    // let check= fieldErrorCheck()
     event.preventDefault();
-    const res = await context.registerUser({
-      username: registerUserName,
-      contact_number: registerContact,
-      email: registerEmail,
-      password: registerPassword,
-      name: registerFullName,
-    });
+    // if (check){
 
-    if (res.status == 201) {
-      //login successful
+    //===
+    let errorCount = 0;
+    setinvalidName(false);
+    setinvalidUserName(false);
+    setinvalidEmail(false);
+    setinvalidPassword(false);
+    setinvalidConfirmPassword(false);
+    setinvalidContact(false);
+    if (registerFullName === "") {
+      setinvalidName(true);
+      errorCount += 1;
+    }
+    if (registerUserName === "") {
+      setinvalidUserName(true);
+      errorCount += 1;
+    }
 
-      console.log("register =>", res);
-      setRegUserName("");
+    if (registerEmail === "" || !registerEmail.includes("@") || !registerEmail.includes(".")) {
+      setinvalidEmail(true);
+      errorCount += 1;
+    }
 
-      setRegPassword("");
+    if (registerPassword === "" || registerPassword.length < 0 || registerPassword.length > 20) {
+      setinvalidPassword(true);
+      errorCount += 1;
+    }
 
-      setRegEmail("");
+    if (registerConfirmPassword === "" || registerConfirmPassword.length < 0 || registerConfirmPassword.length > 20) {
+      setinvalidConfirmPassword(true);
+      errorCount += 1;
+    }
 
-      setRegFullName("");
+    if (registerContact === "" || registerContact.length > 20) {
+      setinvalidContact(true);
+      errorCount += 1;
+    }
 
-      setRegContact("");
+    if (errorCount > 0) {
+      toast.error("Register information is incorrect!", {
+        position: "bottom-right",
+        autoClose: 3500,
+        toastId: "IncorrectConfirmPasswordError",
+      });
+      return;
+    }
+    if (errorCount == 0 && registerConfirmPassword != registerPassword) {
+      toast.error("Incorrect Confirmation Password!", {
+        position: "bottom-right",
+        autoClose: 3500,
+        toastId: "IncorrectConfirmPasswordError",
+      });
+      return;
+    }
 
-      setAuthMode("signin");
-      //routePage("/login");
-    } else {
-      //"Register Error"
+    //"Register Error"
+
+    if (errorCount === 0) {
+      let res = await context.registerUser({
+        username: registerUserName,
+        contact_number: registerContact,
+        email: registerEmail,
+        password: registerPassword,
+        name: registerFullName,
+      });
+
+      if (res.status === 201) {
+        //login successful
+
+        console.log("register =>", res);
+        setRegUserName("");
+
+        setRegPassword("");
+
+        setRegConfirmPassword("");
+
+        setRegEmail("");
+
+        setRegFullName("");
+
+        setRegContact("");
+
+        setAuthMode("signin");
+        //routePage("/login");
+      }
     }
     //alert(`Register: ${userEmail}`);
   };
 
   const updateLoginFormField = (i) => {
     if (i.target.name == "loginEmail") {
-      setUserName(i.target.value);
+      setEmail(i.target.value);
     } else if (i.target.name == "loginPassword") {
       setUserPassword(i.target.value);
     }
@@ -86,6 +216,8 @@ export default function Login() {
       setRegUserName(i.target.value);
     } else if (i.target.name == "registerPassword") {
       setRegPassword(i.target.value);
+    } else if (i.target.name == "registerConfirmPassword") {
+      setRegConfirmPassword(i.target.value);
     } else if (i.target.name == "registerEmail") {
       setRegEmail(i.target.value);
     } else if (i.target.name == "registerFullName") {
@@ -101,15 +233,15 @@ export default function Login() {
         <div className="Auth-form-container">
           <form className="Auth-form" onSubmit={handleLogin}>
             <div className="Auth-form-content">
-              <h3 className="Auth-form-title">Sign In</h3>
-              <div className="text-center">
+              <h3 className="Auth-form-title">Log In</h3>
+              <div className="text-center" >
                 Not registered yet?{" "}
-                <span className="link-primary" onClick={changeAuthMode}>
+                <span className="link-primary"  onClick={changeAuthMode}>
                   Sign Up
                 </span>
               </div>
               <div className="form-group mt-3">
-                <label>Email address</label>
+                <label >Email address</label>
                 <input
                   type="email"
                   id="loginEmail"
@@ -119,9 +251,11 @@ export default function Login() {
                   className="form-control mt-1"
                   placeholder="Enter email"
                 />
+              {invalidEmail === true ? <div style={{ color: "red" }}>Please enter a valid email.</div> : null}
+                {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
               </div>
               <div className="form-group mt-3">
-                <label>Password</label>
+                <label >Password</label>
                 <input
                   type="password"
                   id="loginPassword"
@@ -131,9 +265,12 @@ export default function Login() {
                   className="form-control mt-1"
                   placeholder="Enter password"
                 />
+                {invalidPassword === true ? <div style={{ color: "red" }}>Please enter a valid Password.</div> : null}
+                {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
               </div>
+
               <div className="d-grid gap-2 mt-3 mb-3">
-                <button type="submit" className="btn btn-dark">
+                <button type="submit" style={{marginTop:"20px"}} className="btn btn-dark">
                   Submit
                 </button>
               </div>
@@ -147,12 +284,13 @@ export default function Login() {
     );
   }
 
+
   return (
     <div id="LoginHome">
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleRegister}>
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="Auth-form-title">Register</h3>
             <div className="text-center">
               Already registered?{" "}
               <span className="link-primary" onClick={changeAuthMode}>
@@ -169,7 +307,11 @@ export default function Login() {
                 onChange={updateSignupFormField}
                 placeholder="eg.James89"
               />
+              {invalidUserName === true ? <div style={{ color: "red" }}>Please enter a valid username.</div> : ""}
+
+              {/* <div>hi there</div> */}
             </div>
+
             <div className="form-group mt-3">
               <label>Full Name</label>
               <input
@@ -180,6 +322,8 @@ export default function Login() {
                 onChange={updateSignupFormField}
                 placeholder="eg.Jane Doe"
               />
+              {invalidName === true ? <div style={{ color: "red" }}>Please enter a valid name.</div> : null}
+              {/* {formFieldError.registerFullName? <p className='errorMessage'>{formFieldError.registerFullName}</p> : ''} */}
             </div>
             <div className="form-group mt-3">
               <label>Phone Number</label>
@@ -191,6 +335,7 @@ export default function Login() {
                 onChange={updateSignupFormField}
                 placeholder="eg.97784568"
               />
+              {invalidContact === true ? <div style={{ color: "red" }}>Please enter a valid contact.</div> : null}
             </div>
             <div className="form-group mt-3">
               <label>Email address</label>
@@ -202,6 +347,8 @@ export default function Login() {
                 onChange={updateSignupFormField}
                 placeholder="eg.test89@gmail.com"
               />
+              {invalidEmail === true ? <div style={{ color: "red" }}>Please enter a valid email.</div> : null}
+              {/* {formFieldError.registerEmail? <p className='errorMessage'>{formFieldError.registerEmail}</p> : ''} */}
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
@@ -213,6 +360,21 @@ export default function Login() {
                 onChange={updateSignupFormField}
                 placeholder="eg.******"
               />
+              {invalidPassword === true ? <div style={{ color: "red" }}>Please enter a valid password.</div> : null}
+              {/* {formFieldError.registerPassword ? <p className='errorMessage'>{formFieldError.registerPassword}</p> : ''} */}
+            </div>
+            <div className="form-group mt-3">
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                name="registerConfirmPassword"
+                onChange={updateSignupFormField}
+                value={registerConfirmPassword}
+                className="form-control mt-1"
+                placeholder="eg.******"
+              />
+              {invalidConfirmPassword === true ? <div style={{ color: "red" }}>Please enter a valid confirm password.</div> : null}
+              {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
             </div>
             <div className="d-grid gap-2 mt-3 mb-3">
               <button
@@ -233,41 +395,5 @@ export default function Login() {
   );
   // }
 
-  // return (
-  //   <Fragment>
-  //     <div className="row ms-5 me-5 d-flex justify-content-center loginBox" style={{ marginTop: "80px" }}>
-  //       <div className="login-box m-3 p-3 shadow-lg rounded-3 col-12 col-md-12 col-sm-12">
-  //         <div className="container-fluid py-4" id="login-register-page">
-  //           <div className="container content-container">
-  //             <div className="row justify-content-center">
-  //               <div className="col-12 col-md mx-3 p-3 mb-md-0 mb-3 shadow-lg rounded-3 border border-dark bg-light" style={{ width: "320px" }}>
-  //                 <h1 className="text-center">Login</h1>
-  //                 <p className="text-center">Login to your account below!</p>
-  //                 <form onSubmit={handleLogin}>
-  //                   <div className="form-group mt-3">
-  //                     <label htmlFor="userEmail" className="text-muted">
-  //                       Email
-  //                       <input name="email" value={userEmail} type="text" id="userEmail" placeholder="user@example.com" />
-  //                     </label>
-  //                   </div>
-  //                   <div className="form-group mt-3">
-  //                     <label htmlFor="userPassword" className="text-muted">
-  //                       Password
-  //                       <input name="password" value={userPassword} type="password" id="userPassword" placeholder="********" />
-  //                     </label>
-  //                   </div>
-  //                   <div className="d-grid gap-2 mb-2">
-  //                     <button type="submit" className="btn btn-dark mt-3">
-  //                       Login
-  //                     </button>
-  //                   </div>
-  //                 </form>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </Fragment>
-  // );
+ 
 }

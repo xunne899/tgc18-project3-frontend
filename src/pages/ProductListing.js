@@ -33,9 +33,8 @@ export default function ProductListing() {
   return (
     <Fragment>
       <Container>
-      
         {/* <h1 className="text-center mt-3">Product Listings</h1> */}
- 
+
         <div className="row  d-flex justify-content-center col-sm col-md col-lg">
           {/* <ul> */}
           <SearchForm setSearchResult={setSearchResult} />
@@ -52,7 +51,7 @@ export default function ProductListing() {
               // </li>
 
               //  if(p.type.type === "Spice"){
-              <Card key={`spice_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px" }}>
+              <Card key={`spice_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px",textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
                 {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
                 <Card.Img variant="top" src={p.image_url} style={{ width: "cover" }} alt={""} />
                 <Card.Body style={{ height: "16.5rem" }}>
@@ -73,7 +72,6 @@ export default function ProductListing() {
 
           {/* </ul> */}
         </div>
-        
 
         <div className="row  d-flex justify-content-center col-sm col-md col-lg mb-4">
           {/* <ul> */}
@@ -82,18 +80,17 @@ export default function ProductListing() {
             products.length > 0 &&
             //  products.type.type.value === 'spice' &&
             sauce.map((p, i) => (
-           
-              <Card key={`sauce_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px" }}>
+              <Card key={`sauce_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px", textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
                 {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
                 <Card.Img variant="top" src={p.image_url} style={{ width: "cover" }} alt={""} />
-                <Card.Body style={{ height: "16rem" }}>
+                <Card.Body style={{ height: "15rem" }}>
                   <Card.Title>{p.name}</Card.Title>
                   <Card.Title>{p.type.type}</Card.Title>
 
                   <Card.Text className="mb-4">{p.description}</Card.Text>
 
-                  <Link to={`./${p.id}`}>
-                    <Button variant="dark" id="productButton" className="my-3">
+                  <Link  to={`./${p.id}`}>
+                    <Button  variant="dark" id="productButton" className="my-3">
                       More
                     </Button>
                   </Link>

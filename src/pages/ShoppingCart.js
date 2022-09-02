@@ -26,15 +26,22 @@ export default function ShoppingCart() {
     </React.Fragment>
   ) : (
     <React.Fragment>
-      <div className="container-fluid py-4" style={{backgroundSize:"cover"}}>
-        <div className="container content-container">
-          <div className="h-100 rounded-3 shadow-lg border border-dark" style={{ width: "90%" }}>
-            <div className="h-100 p-4">
-              <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="container-fluid py-4 d-flex shopBox" >
+        <div className="container content-container d-flex justify-content-center align-items-center" >
+          <div className="h-100 w-100 rounded-3 shadow-lg border border-dark" >
+            <div className="h-100 p-4 ">
+              <div className="row d-flex justify-content-center h-100">
                 <div className="col-12">
+            
                   <h3 className="mb-3">Shopping Cart</h3>
                   {cart.length === 0 ? (
-                    <div>No items in cart</div>
+                    <div className="card rounded-3 mb-4 align-self-center">
+                    <div className="card-body p-4">
+                      <div className="row d-flex justify-content-between align-items-center">
+                    <div className="mb-3" >No items in cart</div>
+                     </div>
+                     </div>
+                     </div>
                   ) : (
                     cart.map((eachItem, i) => (
                       <React.Fragment key={`cartItem_${i}`}>
@@ -42,14 +49,17 @@ export default function ShoppingCart() {
                       </React.Fragment>
                     ))
                   )}
-                  <div className="d-flex justify-content-between">
-                  <div className="custom-btn-group me-3">
-                    <button className="btn btn-dark btn-outline-light"onClick={() => navigate("/shop")}>Continue Shopping</button>
-                    <button className="btn btn-dark btn-outline-light mx-2" onClick={onCheckoutSubmit}>
-                      Checkout
+                  <div className="d-flex justify-content-end">
+                  <div className="custom-btn-group">
+                    <button className="btn btn-dark btn-outline-light" style={{width:"110px"}} onClick={() => navigate("/shop")}>Continue
+                    <div>Shopping</div>
+                    </button>
+                    <button className="btn btn-dark btn-outline-light ms-lg-2" onClick={onCheckoutSubmit}>
+                      Checkout 
+                      <div>Total($): {cart?.reduce((totalPrice, eachItem) => totalPrice + eachItem.quantity * (eachItem.variant.cost / 100), 0).toFixed(2)}</div>
                     </button>
                   </div>
-                  <h4>Total($): {cart?.reduce((totalPrice, eachItem) => totalPrice + eachItem.quantity * (eachItem.variant.cost / 100), 0).toFixed(2)}</h4>
+
                   </div>
 
                 </div>

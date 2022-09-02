@@ -32,7 +32,7 @@ function App() {
           <UserProvider>
             <CartProvider>
               <Navbar />
-              <div id="content-wrap" style={{ minHeight: "70vh" }}>
+              <div id="content-wrap" className="contentWrap">
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/home" element={<HomePage />} />

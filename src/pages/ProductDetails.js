@@ -36,7 +36,7 @@ export default function ProductDetails(props) {
     console.log("productInfo=>", productInfo);
     setProduct(productInfo.product);
     setProductInfo(productInfo);
-    
+
     if (productInfo.variants && productInfo.variants.length > 0) {
       setProductVariant(productInfo.variants[0]);
       console.log("Product Variant==>", productVariant);
@@ -88,13 +88,14 @@ export default function ProductDetails(props) {
     <Fragment>
       {/* 
       <label>Type</label> */}
-      <div className="container my-5">
-        <div className="row">
-          {/* <div className="" > */}
-          <img className="col-6 col-lg-6 rounded-3" src={product.image_url} style={{ width: "600px" }} />
+      <div className="container d-flex align-items-center justify-content-center  my-5">
+        {/* <div className="col-12" style={{width:"100%"}}> */}
+        <div className="row centerContainer">
+          {/* <div className="col-md-6 col-lg-6" > */}
+          <img className="col rounded-3" src={product.image_url} style={{ width: "100%", maxWidth:"600px" }} />
           {/* </div> */}
-
-          <div className="row d-flex justify-content-center col-6 col-lg-6  rounded-2 p-1 mt-sm-2" style={{ width: "600px", marginLeft: "12px" }}>
+          {/* <div className="row"> */}
+          <div className="row d-flex justify-content-center col rounded-2 m-1" style={{ width: "100%", maxWidth:"600px" }} >
             <h3 className="text-left mt-1">{product.name}</h3>
             <div>
               {" "}
@@ -106,61 +107,72 @@ export default function ProductDetails(props) {
             <div>
               Ingredients:<span> {product.ingredients && product.ingredients.map((p, i) => <span key={`ingredient_${i}`}>{p.ingredient}</span>)}</span>
             </div>
-            <div key="cuisines">
+            <div>
               Cuisine: {product.cuisine_styles && product.cuisine_styles.map((p, i) => <span key={`cuisine_${i}`}>{p.cuisine_style} </span>)}
             </div>
 
-            <div>Shelf Life(Year): {product.shelf_life}</div>
-            <div className="mt-1 mb-1">{product.description}</div>
+            <div>Shelf Life(Year): {product.shelf_life && product.shelf_life}</div>
+
+            <div>Halal: {product.halal && product.halal}</div>
+            <div>Vegan: {product.vegan && product.vegan}</div>
+            <div className="mt-1 mb-1">{product.description && product.description}</div>
             {/* </ul> */}
 
-            <div className="row  mt-3 mb-3">
-              
-              <div className="d-flex justify-content-left col-3 col-lg-3  ms-0">
-                <div>Size</div>
-                <select
-                  className="rounded-2 border-2 ms-2 mb-2 text-center"
-                  id="variant_select"
-                  style={{ fontSize: "13px", height: "32px", width: "700px" }}
-                  onChange={updateVariantChoice}
-                  value={variantIndex}
-                  name="variant_select_id"
-                >
-                  {productInfo &&
-                    productInfo.variants &&
-                    productInfo.variants.map((t, i) => (
-                      <option key={`variant_${i}`} value={i}>
-                        <div> {t.size.size}</div>
-                      </option>
-                    ))}
-                </select>
-              </div>
-              {/* {variantRender()} */}
+            <div className="mt-3 mb-3">
+              {/* <div className="d-flex justify-content-between"> */}
+              <div className="row">
+                <div className="col">
+                  <div>Size</div>
+                  <select
+                    className="rounded-2 border-2 text-center"
+                    id="variant_select"
+                    style={{ fontSize: "13px", height: "32px", width: "100%" }}
+                    onChange={updateVariantChoice}
+                    value={variantIndex}
+                    name="variant_select_id"
+                  >
+                    {productInfo &&
+                      productInfo.variants &&
+                      productInfo.variants.map((t, i) => (
+                        <option key={`variant_${i}`} value={i}>
+                          <div> {t.size.size}</div>
+                        </option>
+                      ))}
+                  </select>
+                </div>
+                {/* {variantRender()} */}
 
-              <div className="d-flex justify-content-right col-3 col-lg-3 " style={{ marginLeft: "70px" }}>
-                <div>Quantity</div>
-                <input
-                className="rounded-2 border-1 ms-2 text-center"
-                  min="1"
-                  type="number"
-                  name="itemQuantity"
-                  onChange={updateProductItemFormField}
-                  style={{ fontSize: "13px", height: "32px", width: "500px" }}
-                  value={variantQuantity}
-                ></input>
+                <div className="col">
+                  <div>Quantity</div>
+                  <input
+                    className="rounded-2 border-1 text-center"
+                    min="1"
+                    type="number"
+                    name="itemQuantity"
+                    onChange={updateProductItemFormField}
+                    style={{ fontSize: "13px", height: "32px", width: "100%" }}
+                    value={variantQuantity}
+                  ></input>
+                </div>
               </div>
             </div>
 
             <div className="row">
-              {/* <a onClick={() => navigate(-1)}>Continue Shopping</a> */}
+              <button
+              className=" d-flex justify-content-center align-items-center mt-2 me-sm-4 me-md-4 col-12 col-lg-12 btn btn-dark"
+              onClick={() => navigate(-1)}>Back To Shop</button>
               {/* <button onClick={() => navigate("/profile")}>Profile</button> */}
-              <button className=" d-flex justify-content-center align-items-center me-sm-4 me-md-4 col-12 col-lg-12 btn btn-dark"  onClick={AddVariantToCart}>
+              <button
+                className=" d-flex justify-content-center align-items-center mt-1 me-sm-4 me-md-4 col-12 col-lg-12 btn btn-dark"
+                onClick={AddVariantToCart}
+              >
                 Add To Cart
               </button>
             </div>
             <div className="text-center mt-3">Total Cost: ${totalCost.toFixed(2)}</div>
           </div>
-        </div>
+          </div>
+        {/* </div> */}
       </div>
     </Fragment>
   );

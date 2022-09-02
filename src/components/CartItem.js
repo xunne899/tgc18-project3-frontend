@@ -8,6 +8,7 @@ import CartContext from "../contexts/Cart";
 // import { useForm } from "react-hook-form";
 
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function CartItem(props) {
   const { cart, setCart, getCart, updateCartItem, deleteCartItem } = useContext(CartContext);
@@ -15,10 +16,10 @@ export default function CartItem(props) {
 
   // const { id } = useParams();
 
-  const { context } = useContext(ProductContext);
-
-  const [productInfo, setProductInfo] = useState({});
-  const [productVariant, setProductVariant] = useState({});
+  // const { context } = useContext(ProductContext);
+  
+  // const [productInfo, setProductInfo] = useState({});
+  // const [productVariant, setProductVariant] = useState({});
   // const navigate = useNavigate();
   const { cartItem } = props;
   // const [totalCost, setTotalCost] = useState(0.0);
@@ -76,6 +77,9 @@ export default function CartItem(props) {
     console.log("Updating quantity=>", quantity);
     await updateCartItem(cartItem.variant.id, quantity);
     await getCart();
+    // toast('Successfully Submitted', {
+    //   position: "bottom-right",
+    //   autoClose: 2000,});
   };
 
   // return jsx

@@ -31,8 +31,8 @@ export default function HomePage() {
           <div>
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
-          <div className="text-center">
-            <Link to={"/shop"} className="btn btn-dark mt-3 text-center">Shop Here !</Link>
+          <div className="text-center mt-3">
+            <Link to={"/shop"} className="btn btn-dark mt-2 text-center">Shop Here !</Link>
             </div>
           </div>
         </div>
@@ -46,16 +46,16 @@ export default function HomePage() {
       <div id="MainHome">
         <img
           className="d-block w-100 h-100 imageCover"
-          src={require("../../src/images/fresh-spices.jpg")}
+          src={require("../../src/images/asian_round.jpg")}
           alt=" "
           // id="MainHome"
         />
-         <div className="row mx-4" id="HomePageBox">
+         <div className="row mx-4 " id="HomePageBox">
          <div>
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
-          <div className="text-center">
-            <Link to={"/shop"} className="btn btn-dark mt-3 text-center">Shop Here !</Link>
+          <div className="text-center mt-3">
+            <Link to={"/shop"} className="btn btn-dark  mt-2 text-center">Shop Here !</Link>
             </div>
           </div>
           
@@ -71,7 +71,7 @@ export default function HomePage() {
       <div id="MainHome">
         <img
           className="d-block w-100  h-100 imageCover"
-          src={require("../../src/images/spices_view.jpg")}
+          src={require("../../src/images/food_around.jpg")}
           alt=" "
           // id="MainHome"
         />
@@ -79,8 +79,8 @@ export default function HomePage() {
          <div>
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
-          <div className="text-center">
-            <Link to={"/shop"} className="btn btn-dark mt-3 text-center">Shop Here !</Link>
+          <div className="text-center mt-3">
+            <Link to={"/shop"} className="btn btn-dark  mt-2 text-center">Shop Here !</Link>
             </div>
           </div>
         </div>
