@@ -123,7 +123,7 @@ export default function OrdersDetails() {
                       </Fragment>
                     ))}
                     <div className="d-flex justify-content-between mt-2">
-                    <a className="btn btn-dark btn-sm " style={{height:"25px",width:"100px"}} onClick={()=>navigate(-1)}>Back</a>
+                    <a className="btn btn-dark btn-sm " style={{height:"22px",width:"90px"}} onClick={()=>navigate(-1)}>Back</a>
                   {<h4 >Total ${(orderDetail.total_cost / 100).toFixed(2)}</h4>}
                   </div>
                 </div>
