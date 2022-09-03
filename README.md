@@ -4,7 +4,7 @@
 
 * A brief layout of project work in different screen version
 
-<!-- ![Web_view]() -->
+![Web_view](./public/images/web_layout.png)
 
 ### References
 
