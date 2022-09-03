@@ -17,7 +17,7 @@ export default function CartItem(props) {
   // const { id } = useParams();
 
   // const { context } = useContext(ProductContext);
-  
+
   // const [productInfo, setProductInfo] = useState({});
   // const [productVariant, setProductVariant] = useState({});
   // const navigate = useNavigate();
@@ -48,13 +48,16 @@ export default function CartItem(props) {
     setQuantity(cartItem.quantity);
   }, []);
 
+  useEffect(() => {
+    setQuantity(cartItem.quantity);
+  }, [cart]);
+
   // // handle delete button
-  
-  
+
   const onDelete = async () => {
     await deleteCartItem(cartItem.variant.id);
     // setCart(cart.filter((s) => s.variant_id !== variantId));
-    await getCart()
+    await getCart();
   };
   // // useEffect to set initial quantity
   // useEffect(() => {
@@ -73,8 +76,10 @@ export default function CartItem(props) {
   const updateQuantity = (evt) => {
     setQuantity(evt.target.value);
   };
-  const onUpdateQuantity = async () => {
+  const onUpdateQuantity = async (event) => {
+    event.preventDefault();
     console.log("Updating quantity=>", quantity);
+    document.activeElement.blur();
     await updateCartItem(cartItem.variant.id, quantity);
     await getCart();
     // toast('Successfully Submitted', {

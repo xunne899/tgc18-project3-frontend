@@ -230,7 +230,7 @@ export default function Login() {
   if (authMode === "signin") {
     return (
       <div id="LoginHome">
-        <div className="Auth-form-container">
+        <div className="Auth-form-container d-flex align-items-center">
           <form className="Auth-form" onSubmit={handleLogin}>
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">Log In</h3>

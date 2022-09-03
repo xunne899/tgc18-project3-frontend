@@ -92,7 +92,7 @@ export default function ProductDetails(props) {
         {/* <div className="col-12" style={{width:"100%"}}> */}
         <div className="row centerContainer">
           {/* <div className="col-md-6 col-lg-6" > */}
-          <img className="col rounded-3" src={product.image_url} style={{ width: "100%", maxWidth:"600px" }} />
+          <img className="col rounded-3 DetailImg" src={product.image_url} style={{ width: "100%", maxWidth:"600px" }} />
           {/* </div> */}
           {/* <div className="row"> */}
           <div className="row d-flex justify-content-center col rounded-2 m-1" style={{ width: "100%", maxWidth:"600px" }} >

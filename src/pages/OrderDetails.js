@@ -106,7 +106,7 @@ export default function OrdersDetails() {
                           
                         </div> */}
                           <div className="col-lg-2 col-sm-12">
-                            <img src={orderItem.variant.image_url} width="100" class="img-fluid" />
+                            <img src={orderItem.variant.image_url} width="100" className="img-fluid" />
                           </div>
                           <div className="col-lg-4 col-sm-12 ">
                             <div>Name:{orderItem.variant.product.name}</div>

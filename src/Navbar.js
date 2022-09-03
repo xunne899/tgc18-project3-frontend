@@ -21,7 +21,7 @@ export default function NavBar() {
     if (Object.keys(userInfo).length === 0) {
       return (
         // <div className=" ">
-        <li className="nav-item me-lg-3 login mx-auto" >
+        <li className="nav-item me-lg-3 login mx-auto">
           <Link className="nav-link text-center" to="/login">
             Login
           </Link>
@@ -31,14 +31,14 @@ export default function NavBar() {
     } else {
       return (
         <Fragment>
-          {/* <div class="row  "> */}
-          <div class="nav-item dropdown me-lg-3">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle personIcon"></i>
+          {/* <div className="row  "> */}
+          <div className="nav-item dropdown me-lg-3">
+            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i className="bi bi-person-circle personIcon"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+            <div className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
               <li>
-                <a class="dropdown-item text-center" href="#">
+                <a className="dropdown-item text-center" href="#">
                   <Link className="nav-link ms-lg-2" to="/profile">
                     Profile
                   </Link>
@@ -46,7 +46,7 @@ export default function NavBar() {
               </li>
               {/* <div className="ms-auto d-flex justify-content-center me-lg-3"> */}
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   <Link className=" nav-link " to="/cart">
                     {/* <div className="cartWrap"> */}
                     {renderCartBadge()}
@@ -58,14 +58,14 @@ export default function NavBar() {
               </li>
               {/* </div> */}
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   <Link className="nav-link ms-lg-2" to="/order">
                     Orders
                   </Link>
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   <Link className="nav-link ms-lg-2" to="/logout">
                     Logout
                   </Link>

@@ -16,7 +16,7 @@ export default function CartProvider(props) {
   // const [selection, setSelection] = useState({ variant_id: "", quantity: "" })
   // const [tempVariant, setTempVariant] = useState({})
   const [checkoutResponse, setCheckoutResponse] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [pageIsLoaded, setPageIsLoaded] = useState(true);
   const baseUrl = "https://project3-spice-sauce.herokuapp.com";
   // useEffect to get cart items on componenet did mount
   useEffect(() => {
@@ -26,12 +26,14 @@ export default function CartProvider(props) {
   useEffect(() => {
     const stripeCheckout = async () => {
       const stripePromise = loadStripe(checkoutResponse.publishableKey);
-      const stripe = await toast.promise(stripePromise, {
-        pending: "Checking out cart",
-        success: "Redirecting to Stripe",
-        error: "Error checking out cart. Please try again later.",
-      },
-      { position: toast.POSITION.BOTTOM_RIGHT }
+      const stripe = await toast.promise(
+        stripePromise,
+        {
+          pending: "Checking out cart",
+          success: "Redirecting to Stripe",
+          error: "Error checking out cart. Please try again later.",
+        },
+        { position: toast.POSITION.BOTTOM_RIGHT }
       );
       stripe.redirectToCheckout({ sessionId: checkoutResponse.sessionId });
     };
@@ -43,7 +45,7 @@ export default function CartProvider(props) {
 
   //context functions
   const getCart = async () => {
-    setIsLoading(true);
+    setPageIsLoaded(true);
     if (userInfo.accessToken) {
       try {
         const response = await axios.get(`${baseUrl}/api/carts`, {
@@ -51,22 +53,38 @@ export default function CartProvider(props) {
             Authorization: `Bearer ${userInfo.accessToken}`,
           },
         });
-        console.log("getCart=>", response);
+
         // setCart(response.data.cartItems );
-        setCart(response.data && response.data.cartItems ? response.data.cartItems : []);
-        setIsLoading(false);
+        if (response.data && response.data.cartItems) {
+          if (response.data.cartItems.length > 1) {
+            response.data.cartItems.sort((a, b) => {
+              const id1 = a.variant.id;
+              const id2 = b.variant.id;
+              if (id1 > id2) {
+                return 1;
+              } else {
+                return -1;
+              }
+            });
+          }
+          console.log("cart sorted=>", response.data.cartItems);
+          setCart(response.data.cartItems);
+        } else {
+          setCart([]);
+        }
+        setPageIsLoaded(false);
       } catch {
         toast.error("Unable to connect to server. Please try again later.", {
           position: "bottom-right",
           autoClose: 3500,
           toastId: "getCartError",
         });
-        setIsLoading(false);
+        setPageIsLoaded(false);
       }
     } else {
       setCart([]);
     }
-    setIsLoading(false);
+    setPageIsLoaded(false);
   };
 
   const addToCart = async (variantId, quantity) => {
@@ -130,7 +148,6 @@ export default function CartProvider(props) {
           {
             pending: "Updating cart item quantity",
             success: "Successfully updated cart item quantity.",
-          
           },
           { position: toast.POSITION.BOTTOM_RIGHT }
         );
@@ -209,8 +226,8 @@ export default function CartProvider(props) {
         cart,
         setCart,
         checkoutResponse,
-        isLoading,
-        setIsLoading,
+        pageIsLoaded,
+        setPageIsLoaded,
         getCart,
         addToCart,
         updateCartItem,

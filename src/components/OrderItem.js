@@ -15,10 +15,10 @@ export default function OrderItem(props) {
   return (
     <React.Fragment>
       {/* <div className=" row overflow-auto"> 
-      <table class="table table-striped table-hover">
+      <table className="table table-striped table-hover">
 
-      <thead class="table-dark">
-            <tr class=" col-12">
+      <thead className="table-dark">
+            <tr className=" col-12">
             <th></th>
                 <th>Order ID</th>
                 <th>Email</th>
@@ -35,7 +35,7 @@ export default function OrderItem(props) {
         </thead>
 
         <tbody> */}
-      <tr class="col-12">
+      <tr className="col-12">
         <td>{orderItem.id}</td>
         {/* <td>{orderItem.customer.email}</td> */}
         {/* <td>{orderItem.shipping_address_line1}</td> */}

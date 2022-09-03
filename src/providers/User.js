@@ -15,6 +15,9 @@ export default function UserProvider(props) {
   const [timeOutSession, setTimeOutSession] = useState();
 
   useEffect(() => {
+    /* 1. I close my browser, and i open my webpage within 60min */
+    /* 2. I close my browser, and i open my webpage after 60min */
+    /* In any case where refresh api fails, user session will be cleared and prompt to login again */
     let storedUserInfo = localStorage.getItem("UserInfo");
     if (storedUserInfo) {
       // refresh session when first time loading page after closing. sesion should be active for 1 hour.
@@ -109,54 +112,53 @@ export default function UserProvider(props) {
       setPageIsLoaded(true);
     },
 
-
     loginUser: async (loginBody) => {
       try {
-      setPageIsLoaded(false);
-      console.log(loginBody);
-      const res = await axios({
-        method: "post",
-        url: baseUrl + "/api/customers/login",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: loginBody,
-      });
-
-      //const res = await axios.post(baseUrl + "api/customers/login", loginBody);
-      console.log("post api login=>", res);
-      if (res.status == 200) {
-        setUserInfo(res.data);
-        localStorage.setItem("UserInfo", JSON.stringify(res.data));
-        toast("Logged in successfully.", {
-          position: "bottom-right",
-          autoClose: 3000,
+        setPageIsLoaded(false);
+        console.log(loginBody);
+        const res = await axios({
+          method: "post",
+          url: baseUrl + "/api/customers/login",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: loginBody,
         });
-        // reminder after 59min
-        promptSessionTimingOut();
-      }
-      setPageIsLoaded(true);
 
-      return res;
-    }
-    catch (err) {
-      // const res = await axios({
-      //   method: "post",
-      //   url: baseUrl + "/api/customers/login",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   data: loginBody,
-      // });
-    // let errorMessage
-    // if (res.status === 401) {
-      toast.error("Invalid email or password. Please try again.", {
-        toastId: "getUserError",
-        position:"bottom-right"
-      });
-      setUserInfo({});
-// }
-}},
+        //const res = await axios.post(baseUrl + "api/customers/login", loginBody);
+        console.log("post api login=>", res);
+        if (res.status == 200) {
+          setUserInfo(res.data);
+          localStorage.setItem("UserInfo", JSON.stringify(res.data));
+          toast("Logged in successfully.", {
+            position: "bottom-right",
+            autoClose: 3000,
+          });
+          // reminder after 59min
+          promptSessionTimingOut();
+        }
+        setPageIsLoaded(true);
+
+        return res;
+      } catch (err) {
+        // const res = await axios({
+        //   method: "post",
+        //   url: baseUrl + "/api/customers/login",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   data: loginBody,
+        // });
+        // let errorMessage
+        // if (res.status === 401) {
+        toast.error("Invalid email or password. Please try again.", {
+          toastId: "getUserError",
+          position: "bottom-right",
+        });
+        setUserInfo({});
+        // }
+      }
+    },
 
     registerUser: async (registerBody) => {
       setPageIsLoaded(false);

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import HomePage from "./pages/HomePage";
-import About from "./pages/About";
+// import About from "./pages/About";
 import ShoppingCart from "./pages/ShoppingCart";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
@@ -16,6 +16,7 @@ import Profile from "./pages/Profile";
 import Shop from "./pages/Shop";
 import CheckOut from "./pages/CheckOut";
 import Orders from "./pages/Orders";
+import LoadingSpice from "./components/LoadingSpice";
 
 import UserProvider from "./providers/User";
 import CartProvider from "./providers/Cart";
@@ -36,7 +37,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/home" element={<HomePage />} />
-                  <Route path="/about" element={<About />} />
+                  {/* <Route path="/about" element={<About />} /> */}
                   <Route path="/shop/*" element={<Shop />} />
                   <Route path="/cart" element={<ShoppingCart />} />
                   <Route path="/contact" element={<ContactUs />} />
@@ -50,6 +51,7 @@ function App() {
               {/* </nav> */}
               <ToastContainer />
               <SessionPopup />
+              <LoadingSpice />
             </CartProvider>
           </UserProvider>
         </Router>

@@ -76,7 +76,7 @@ export default function OrderListing() {
                     <div className="mb-0 col text-end">
                       Need help?
                       <span>
-                        <Link to="/contact" style={{marginLeft:"5px"}} className="text-dark">
+                        <Link to="/contact" style={{ marginLeft: "5px" }} className="text-dark">
                           {"Contact us!"}
                         </Link>
                       </span>
@@ -87,9 +87,9 @@ export default function OrderListing() {
                     <div>No pending orders</div>
                   ) : (
                     <div className=" row overflow-auto">
-                      <table class="table table-striped table-hover">
-                        <thead class="table-dark">
-                          <tr class=" col-12">
+                      <table className="table table-striped table-hover">
+                        <thead className="table-dark">
+                          <tr className=" col-12">
                             <th>Order ID</th>
                             <th>Product</th>
                             <th>Item(s)</th>
@@ -128,9 +128,9 @@ export default function OrderListing() {
                     <div>No completed orders</div>
                   ) : (
                     <div className=" row overflow-auto">
-                      <table class="table table-striped table-hover">
-                        <thead class="table-dark">
-                          <tr class=" col-12">
+                      <table className="table table-striped table-hover">
+                        <thead className="table-dark">
+                          <tr className=" col-12">
                             <th>Order ID</th>
                             <th>Product</th>
                             <th>Item(s)</th>
