@@ -76,9 +76,9 @@ export default function ProductDetails(props) {
               Cuisine: {product.cuisine_styles && product.cuisine_styles.map((p, i) => <span key={`cuisine_${i}`}>{p.cuisine_style} </span>)}
             </div>
             <div>Shelf Life(Year): {product.shelf_life && product.shelf_life}</div>
-            <div>Packaging: {product.packaging && product.packaging.packaging}</div>
             <div>Halal: {product.halal && product.halal}</div>
             <div>Vegan: {product.vegan && product.vegan}</div>
+            <div>Packaging: {product.packaging && product.packaging.packaging}</div>
             <div className="mt-1 mb-1">{product.description && product.description}</div>
             <div className="mt-3 mb-3">
               <div className="row">
