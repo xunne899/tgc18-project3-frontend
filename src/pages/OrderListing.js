@@ -65,7 +65,7 @@ export default function OrderListing() {
     </div>
   ) : (
     <React.Fragment>
-      <div className="container-fluid py-4">
+      <div className="container-fluid py-4 " >
         <div className="container content-container flex-column">
           <div className="h-100 rounded-3 border border-dark shadow mb-5 auto-margin-leftright" style={{ width: "90%" }}>
             <div className="h-100 p-4">
