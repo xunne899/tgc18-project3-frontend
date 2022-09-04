@@ -4,31 +4,7 @@ import { toast } from "react-toastify";
 import UserContext from "../contexts/User";
 
 export default function Login() {
-  //=====
-  // const navigate = useNavigate();
-  // const [formState, setFormState] = useState({
-  //     'username': '',
-  //     'email': '',
-  //     'address': '',
-  //     'password': '',
-  //     'confirm_password': ''
-  // })
-
-  // username: registerUserName,
-  //     contact_number: registerContact,
-  //     email: registerEmail,
-  //     password: registerPassword,
-  //     name:
-
-  // //login
-  // const [userEmail, setUserName] = useState("");
-  // const [userPassword, setUserPassword] = useState("");
-  // //register
-  // const [registerUserName, setRegUserName] = useState("");
-  // const [registerPassword, setRegPassword] = useState("");
-  // const [registerEmail, setRegEmail] = useState("");
-  // const [registerFullName, setRegFullName] = useState("");
-  // const [registerContact, setRegContact] = useState( "");
+  
 
   //login
   const [userEmail, setEmail] = useState("");
@@ -41,8 +17,6 @@ export default function Login() {
   const [registerFullName, setRegFullName] = useState("");
   const [registerContact, setRegContact] = useState("");
 
-  //---
-  // const [formFieldError, setformFieldError] = useState({})
 
   const [authMode, setAuthMode] = useState("signin");
   const { userInfo, pageIsLoaded, context } = useContext(UserContext);
@@ -92,24 +66,20 @@ export default function Login() {
         setEmail("");
 
         setUserPassword("");
-        // console.log("register =>", res);
         routePage("/shop");
-        //routePage("/login");
       }
     }
 
-    //alert(`Login: ${userEmail}`);
   };
 
 
 
 
   const handleRegister = async (event) => {
-    // let check= fieldErrorCheck()
     event.preventDefault();
-    // if (check){
 
-    //===
+
+
     let errorCount = 0;
     setinvalidName(false);
     setinvalidUserName(false);
@@ -191,10 +161,10 @@ export default function Login() {
         setRegContact("");
 
         setAuthMode("signin");
-        //routePage("/login");
+ 
       }
     }
-    //alert(`Register: ${userEmail}`);
+
   };
 
   const updateLoginFormField = (i) => {
@@ -205,11 +175,6 @@ export default function Login() {
     }
   };
 
-  // const [registerUserName, setRegUserName] = useState("");
-  // const [registerPassword, setRegPassword] = useState("");
-  // const [registerEmail, setRegEmail] = useState("");
-  // const [registerFullName, setRegFullName] = useState("");
-  // const [registerContact, setRegContact] = useState("");
 
   const updateSignupFormField = (i) => {
     if (i.target.name == "registerUserName") {
@@ -252,7 +217,6 @@ export default function Login() {
                   placeholder="Enter email"
                 />
               {invalidEmail === true ? <div style={{ color: "red" }}>Please enter a valid email.</div> : null}
-                {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
               </div>
               <div className="form-group mt-3">
                 <label >Password</label>
@@ -266,7 +230,6 @@ export default function Login() {
                   placeholder="Enter password"
                 />
                 {invalidPassword === true ? <div style={{ color: "red" }}>Please enter a valid Password.</div> : null}
-                {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
               </div>
 
               <div className="d-grid gap-2 mt-3 mb-3">
@@ -274,9 +237,6 @@ export default function Login() {
                   Submit
                 </button>
               </div>
-              {/* <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
-            </p> */}
             </div>
           </form>
         </div>
@@ -308,8 +268,6 @@ export default function Login() {
                 placeholder="eg.James89"
               />
               {invalidUserName === true ? <div style={{ color: "red" }}>Please enter a valid username.</div> : ""}
-
-              {/* <div>hi there</div> */}
             </div>
 
             <div className="form-group mt-3">
@@ -323,7 +281,6 @@ export default function Login() {
                 placeholder="eg.Jane Doe"
               />
               {invalidName === true ? <div style={{ color: "red" }}>Please enter a valid name.</div> : null}
-              {/* {formFieldError.registerFullName? <p className='errorMessage'>{formFieldError.registerFullName}</p> : ''} */}
             </div>
             <div className="form-group mt-3">
               <label>Phone Number</label>
@@ -348,7 +305,6 @@ export default function Login() {
                 placeholder="eg.test89@gmail.com"
               />
               {invalidEmail === true ? <div style={{ color: "red" }}>Please enter a valid email.</div> : null}
-              {/* {formFieldError.registerEmail? <p className='errorMessage'>{formFieldError.registerEmail}</p> : ''} */}
             </div>
             <div className="form-group mt-3">
               <label>Password</label>
@@ -361,7 +317,6 @@ export default function Login() {
                 placeholder="eg.******"
               />
               {invalidPassword === true ? <div style={{ color: "red" }}>Please enter a valid password.</div> : null}
-              {/* {formFieldError.registerPassword ? <p className='errorMessage'>{formFieldError.registerPassword}</p> : ''} */}
             </div>
             <div className="form-group mt-3">
               <label>Confirm Password</label>
@@ -374,26 +329,20 @@ export default function Login() {
                 placeholder="eg.******"
               />
               {invalidConfirmPassword === true ? <div style={{ color: "red" }}>Please enter a valid confirm password.</div> : null}
-              {/* {formFieldError.username ? <p className='errorMessage'>{formFieldError.username}</p> : ''} */}
             </div>
             <div className="d-grid gap-2 mt-3 mb-3">
               <button
                 type="submit"
-                // onClick={() => setAuthMode("signin")}
                 className="btn btn-dark"
               >
                 Submit
               </button>
             </div>
-            {/* <p className="text-center mt-2">
-            Forgot <a href="#">password?</a>
-          </p> */}
           </div>
         </form>
       </div>
     </div>
   );
-  // }
 
  
 }

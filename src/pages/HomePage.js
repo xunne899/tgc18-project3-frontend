@@ -31,16 +31,14 @@ export default function HomePage() {
           <div>
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
-          <div className="text-center mt-3">
+          
+          <div className="text-center mt-3" >
             <Link to={"/shop"} className="btn btn-dark mt-2 text-center">Shop Here !</Link>
             </div>
           </div>
+          </div>
         </div>
-        </div>
-        {/* <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption> */}
+       
       </Carousel.Item>
       <Carousel.Item >
       <div id="MainHome">
@@ -48,10 +46,9 @@ export default function HomePage() {
           className="d-block w-100 h-100 imageCover"
           src={require("../../src/images/asian_round.jpg")}
           alt=" "
-          // id="MainHome"
         />
          <div className="row mx-4 " id="HomePageBox">
-         <div>
+         <div >
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
           <div className="text-center mt-3">
@@ -74,7 +71,7 @@ export default function HomePage() {
          <div>
           <h3 className="text-center mt-4">Your One-Stop Spice Solution</h3>
           <span><p className="text-center mt-1">View our variety of spices selection below !</p></span>
-          <div className="text-center mt-3 mb-sm-2">
+          <div className="text-center mt-3">
             <Link to={"/shop"} className="btn btn-dark mt-2 text-center">Shop Here !</Link>
             </div>
           </div>

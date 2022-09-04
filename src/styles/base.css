@@ -3,33 +3,23 @@
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
-
 body{
-  
     overflow-x: hidden !important;
-   
 }
-
-
 
 .nav-link{
   text-align: center;
-  /* color:grey! important; */
-  /* font-size:14px;
-  font-weight:300 */
 }
 
 #MainHome{
     position:relative;
-    /* background-image: url(../images/asian_spices.jpg); */
     background-size: cover;
     width: auto;
     height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 0;
-    margin: 0; */
+
 }
 
 .imageCover {
@@ -45,41 +35,24 @@ backdrop-filter: blur( 1px );
 -webkit-backdrop-filter: blur( 1px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-/* padding-top: 80%;  */
-/* width:520px; */
 height:205px;
 width:68%;
 max-width:470px;
-/* margin-top: 150px; */
-/* margin-left: 150px; */
- position: absolute; 
-  /* top: 20%;
- left: 35%;   */
-/* right: 50%;  */
+position: absolute; 
 
 }
-
 
 
 #LoginHome{
   position:relative;
   background-image: url(../images/spice_black.jpg);
   background-size: cover;
-  /* width: auto; */
   width: 100%;
-  /* height: 100vh;  */
-  /* min-height: calc(100vh - 218px); */
   min-height: 100vh;
-  /* display: flex; */
-
   background-position: center center;
-  /* background-repeat: no-repeat; */
-  /* background-attachment: fixed; */
   align-items: center;
   justify-content: center;
  
-  /* padding: 0;
-  margin: 0; */
 }
 
 
@@ -97,11 +70,7 @@ max-width:470px;
   width: 100vw;
   padding-top: 23vh;
   padding-bottom: 24vh;
-  /* position:absolute;
-  top:4%;
-  bottom:7%  */
 
- 
 }
 
 .Auth-form {
@@ -134,7 +103,6 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   
 }
-
 
 
 
@@ -239,8 +207,6 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 
 
-
-
 #ContactHome{
   position:relative;
   background-image: url(../images/spices_set.jpg);
@@ -251,18 +217,13 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   align-items: center;
   justify-content: center;
   background-position: center ;
-  /* background-repeat: no-repeat;
-  background-attachment: fixed; */
+
 
 }
-/* 
-contactForm{
 
-} */
 
 #ProfileMain{
 
-  /* position:relative; */
   background-image: url(../images/colorful_spices.jpg);
   background-size: cover;
   width: 100%;
@@ -289,15 +250,10 @@ contactForm{
   background-color: black;
   color:white;
 }
-/* .accordion-button collapsed{
-  background-color: black;
-  color:white;
- 
-} */
+
 .accordion-button:after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
-
 
 
 .leftImage{
@@ -316,12 +272,8 @@ contactForm{
   height: 19px;
   width: 20px;
   border-radius: 13px;
-  /* margin-right: 4px; */
   margin: auto 2px 2px auto;
-  /* border-radius: 20px;
-  line-height:15px;
-  margin-right: 4px;
-  align-items: center; */
+
 }
 
 .basketIcon{
@@ -334,8 +286,7 @@ contactForm{
 
 .personIcon{
   font-size: 20px;
-  /* padding-top: 10px; */
-  /* display:flex; */
+
   align-items: center;
 }
 .nav-bar{
@@ -359,8 +310,9 @@ contactForm{
 
 .contentWrap{
   min-height: calc(100vh - 218px);/* view height max minus footer+navbar height*/
-  /* overflow-y: hidden */
+
 }
+
 #bottomFooter{
   position: absolute;
   bottom: 0;
@@ -387,15 +339,11 @@ contactForm{
 }
 
 
-
 .shopBox{
 
   margin-top: 6vh;
-  /* margin-bottom: 6vh; */
+
 }
-
-
-
 
 
 

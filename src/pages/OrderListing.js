@@ -93,11 +93,8 @@ export default function OrderListing() {
                             <th>Order ID</th>
                             <th>Product</th>
                             <th>Item(s)</th>
-                            {/* <th>Email</th> */}
-                            {/* <th>Shipping Address</th> */}
                             <th>Total Cost</th>
                             <th>Order Date</th>
-                            {/* <th>Payment Intent</th> */}
                             <th>Status</th>
                             <th></th>
                             <th></th>
@@ -134,11 +131,8 @@ export default function OrderListing() {
                             <th>Order ID</th>
                             <th>Product</th>
                             <th>Item(s)</th>
-                            {/* <th>Email</th>
-                            <th>Shipping Address</th> */}
                             <th>Total Cost</th>
                             <th>Order Date</th>
-                            {/* <th>Payment Intent</th> */}
                             <th>Status</th>
                             <th></th>
                             <th></th>

@@ -15,9 +15,9 @@ export default function UserProvider(props) {
   const [timeOutSession, setTimeOutSession] = useState();
 
   useEffect(() => {
-    /* 1. I close my browser, and i open my webpage within 60min */
-    /* 2. I close my browser, and i open my webpage after 60min */
-    /* In any case where refresh api fails, user session will be cleared and prompt to login again */
+    /*  close browser, open  webpage within 60min */
+    /* close browser, open my webpage after 60min */
+    /* where refresh api fails, user session will be cleared and prompt to login again */
     let storedUserInfo = localStorage.getItem("UserInfo");
     if (storedUserInfo) {
       // refresh session when first time loading page after closing. sesion should be active for 1 hour.
@@ -125,7 +125,7 @@ export default function UserProvider(props) {
           data: loginBody,
         });
 
-        //const res = await axios.post(baseUrl + "api/customers/login", loginBody);
+
         console.log("post api login=>", res);
         if (res.status == 200) {
           setUserInfo(res.data);
@@ -141,22 +141,13 @@ export default function UserProvider(props) {
 
         return res;
       } catch (err) {
-        // const res = await axios({
-        //   method: "post",
-        //   url: baseUrl + "/api/customers/login",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   data: loginBody,
-        // });
-        // let errorMessage
-        // if (res.status === 401) {
+
         toast.error("Invalid email or password. Please try again.", {
           toastId: "getUserError",
           position: "bottom-right",
         });
         setUserInfo({});
-        // }
+
       }
     },
 
@@ -172,7 +163,7 @@ export default function UserProvider(props) {
         data: registerBody,
       });
 
-      //const res = await axios.post(baseUrl + "api/customers/login", loginBody);
+
       console.log("post api register=>", res);
       if (res.status == 201) {
         toast("Registered successfully.", {

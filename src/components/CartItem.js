@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-// import CartContext from "../context/CartContext";
 import ProductContext from "../contexts/Product";
 import CartContext from "../contexts/Cart";
-// import { updateCartQuantitySchema } from "../assets/schema";
-// import { useForm } from "react-hook-form";
+
 
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -14,34 +12,8 @@ export default function CartItem(props) {
   const { cart, setCart, getCart, updateCartItem, deleteCartItem } = useContext(CartContext);
   const [quantity, setQuantity] = useState();
 
-  // const { id } = useParams();
-
-  // const { context } = useContext(ProductContext);
-
-  // const [productInfo, setProductInfo] = useState({});
-  // const [productVariant, setProductVariant] = useState({});
-  // const navigate = useNavigate();
   const { cartItem } = props;
-  // const [totalCost, setTotalCost] = useState(0.0);
-
-  // const { addToCart } = useContext(CartContext);
-
-  // const [product, setProduct] = useState({
-  //   product_name: "",
-  // });
-
-  // async function getProductDetail() {
-  //   const productInfo = await context.getProductByID(parseInt(id));
-  //   console.log("productInfo=>", productInfo);
-  //   setProduct(productInfo.product);
-  //   setProductInfo(productInfo);
-
-  //   if (productInfo.variants && productInfo.variants.length > 0) {
-  //     setProductVariant(productInfo.variants[0]);
-  //     console.log("Product Variant==>", productVariant);
-  //     setTotalCost(productInfo.variants[0].cost / 100);
-  //   }
-  // }
+ 
 
   useEffect(() => {
     console.log(" props.cartItem=>", cartItem);
@@ -52,27 +24,12 @@ export default function CartItem(props) {
     setQuantity(cartItem.quantity);
   }, [cart]);
 
-  // // handle delete button
-
+  // handle delete button
   const onDelete = async () => {
     await deleteCartItem(cartItem.variant.id);
-    // setCart(cart.filter((s) => s.variant_id !== variantId));
     await getCart();
   };
-  // // useEffect to set initial quantity
-  // useEffect(() => {
-  //   setQuantity(quantity);
-  // }, [cart]);
-
-  // handle quantity update and form
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // }
-  // = useForm({
-  //   resolver: yupResolver(updateCartQuantitySchema),
-  // });
+  
   const updateQuantity = (evt) => {
     setQuantity(evt.target.value);
   };
@@ -82,9 +39,7 @@ export default function CartItem(props) {
     document.activeElement.blur();
     await updateCartItem(cartItem.variant.id, quantity);
     await getCart();
-    // toast('Successfully Submitted', {
-    //   position: "bottom-right",
-    //   autoClose: 2000,});
+
   };
 
   // return jsx

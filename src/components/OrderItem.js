@@ -14,31 +14,8 @@ export default function OrderItem(props) {
 
   return (
     <React.Fragment>
-      {/* <div className=" row overflow-auto"> 
-      <table className="table table-striped table-hover">
-
-      <thead className="table-dark">
-            <tr className=" col-12">
-            <th></th>
-                <th>Order ID</th>
-                <th>Email</th>
-                <th>Shipping Address</th>
-                <th>Total Cost</th>
-                <th>Order Date</th>
-                <th>Status</th>
-                <th></th>
-                <th></th>
-                <th></th>
-
-
-            </tr>
-        </thead>
-
-        <tbody> */}
       <tr className="col-12">
         <td>{orderItem.id}</td>
-        {/* <td>{orderItem.customer.email}</td> */}
-        {/* <td>{orderItem.shipping_address_line1}</td> */}
         <td>
           <img style={{ width: "100px" }} src={orderItem.orderItems[0].variant.image_url} />
         </td>
@@ -49,11 +26,6 @@ export default function OrderItem(props) {
         <td>{orderDateDisplay}</td>
         <td>{orderItem.orderStatus.order_status}</td>
         <td>
-          {/* <Link to={`./${orderItem.id}`}>
-            <Button variant="dark" id="productButton">
-              More Details
-            </Button>
-          </Link> */}
           <div className="d-flex justify-content-end">
             <a href={`/order/${orderItem.id}`} className="btn btn-dark btn-sm me-3">
               More Details
@@ -66,10 +38,6 @@ export default function OrderItem(props) {
         <td></td>
         <td></td>
       </tr>
-
-      {/* </tbody>
-    </table>
-    </div> */}
     </React.Fragment>
   );
 }

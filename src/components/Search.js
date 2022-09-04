@@ -16,7 +16,6 @@ export default function SearchForm(props) {
     });
   };
   const onSearchClick = (e) => {
-    //context.getProducts()
     e.preventDefault();
     setSearchResult(searchFields);
   };

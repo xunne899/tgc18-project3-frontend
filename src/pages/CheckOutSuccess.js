@@ -29,9 +29,10 @@ export default function CheckOutSuccess() {
 
   return (
     <React.Fragment>
-    
+        <div classname=" mt-2">
       <h1 className="text-center mt-2">Transaction is successful.</h1>
       <div className="text-center">Redirecting you to order history in {countDown}</div>
+      </div>
     </React.Fragment>
   );
 }

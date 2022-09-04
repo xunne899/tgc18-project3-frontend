@@ -2,7 +2,6 @@ import React, { Fragment, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import UserContext from "../contexts/User";
-// import OrderItem from "../components/OrderItem";
 import { toast } from "react-toastify";
 import moment from "moment";
 
@@ -57,18 +56,13 @@ export default function OrdersDetails() {
             <div className="h-100 p-4 ">
               {orderDetail && (
                 <div className="row d-flex justify-content-center h-100">
-                  {/* <div className="col-12"></div> */}
-                  {/* {orderDetail && <OrderItem orderItem={orderDetail} />} */}
-
                   <div className="d-flex justify-content-between my-auto">
                     <h3>Order Details</h3>
-
                     <a
                       className="btn btn-dark btn-sm d-flex justify-content-center"
                       href={orderDetail.receipt_url}
                       target="_blank"
-                      style={{ width: "70px", height: "30px" }}
-                    >
+                      style={{ width: "70px", height: "30px" }}>
                       Receipt
                     </a>
                   </div>
@@ -87,7 +81,6 @@ export default function OrdersDetails() {
                   </div>
                   <div className="d-flex justify-content-between my-auto">
                     <h5>Order Status</h5>
-
                     <div>{orderDetail.orderStatus.order_status}</div>
                   </div>
                   <div className="d-flex justify-content-between my-auto">
@@ -102,9 +95,6 @@ export default function OrdersDetails() {
                     orderItems.map((orderItem, i) => (
                       <Fragment key={`orderItem_${i}`}>
                         <div className="row overflow-auto border border-1 rounded-3 mt-2 p-3">
-                          {/* <div className="col-lg-2 col-sm-12 ">
-                          
-                        </div> */}
                           <div className="col-lg-2 col-sm-12">
                             <img src={orderItem.variant.image_url} width="100" className="img-fluid" />
                           </div>
@@ -117,7 +107,6 @@ export default function OrdersDetails() {
                           <div className="col-lg-2 col-sm-12 ">
                             <div>Quantity:{orderItem.quantity}</div>
                           </div>
-
                           <div className="col-lg-2 ms-auto text-right col-sm-12 ">{<div>${((orderItem.variant.cost * orderItem.quantity) / 100).toFixed(2)}</div>}</div>
                         </div>
                       </Fragment>

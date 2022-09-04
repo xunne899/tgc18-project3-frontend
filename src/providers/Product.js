@@ -2,7 +2,7 @@ import axios from "axios";
 import { Fragment, useState, useEffect, useContext } from "react";
 import ProductContext from "../contexts/Product";
 import UserContext from "../contexts/User";
-// make sure the ProductProvider has props
+// ProductProvider has props
 // ProductProvider is just a component
 export default function ProductProvider(props) {
   const [types, setTypes] = useState([]);
@@ -17,7 +17,7 @@ export default function ProductProvider(props) {
   const [products, setProducts] = useState([]);
   const userContext = useContext(UserContext);
 
-  //userContext.userInfo.accessToken
+  
   const baseUrl = "https://project3-spice-sauce.herokuapp.com/";
 
   const context = {
@@ -59,7 +59,7 @@ export default function ProductProvider(props) {
     getSearchFields: async () => {
       console.log("getSearchFields");
       setPageIsLoaded(false);
-      // console.log("get Product userInfo==>", userContext.userInfo);
+
       let res = await axios.get(baseUrl + "api/products/types", {
         "Content-Type": "application/json",
       });
@@ -95,10 +95,6 @@ export default function ProductProvider(props) {
       if (res.status === 200) {
         setCuisineStyles(res.data);
       }
-      //console.log("post api cuisine=>", res);
-      // if (res.status === 200) {
-      //   setProducts(res.data);
-      // }
 
       setPageIsLoaded(true);
       return products;
@@ -119,11 +115,7 @@ export default function ProductProvider(props) {
       return res.data;
     },
   };
-  //   useEffect(() => {
-  //     getProducts()
-  //     getSearchSelection()
-  // }, [])
-  // use ProductProvider as a higher order component
+
   return (
     <ProductContext.Provider
       value={{

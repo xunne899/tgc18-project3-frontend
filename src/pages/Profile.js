@@ -1,6 +1,4 @@
 import axios from "axios";
-// import { Fragment, useState, useEffect } from "react";
-
 import { React, useEffect, useContext, useState, Fragment } from "react";
 import context from "react-bootstrap/esm/AccordionContext";
 import UserContext from "../contexts/User";
@@ -11,7 +9,7 @@ export default function Profile() {
   useEffect(() => {
     context.getProfile();
     console.log("Profile page");
-    // setProfile(context.getProfile);
+
   }, [userInfo.accessToken]);
 
   const convertDate = (dateStr) => {
@@ -55,12 +53,9 @@ export default function Profile() {
               <div className="auto-margin-leftright profileWrapper">
                 <img className="profileImg" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
                 <div className="rounded-3 p-4 shadow-lg bg-light profileBox" style={{ width: "50vw", background: "rgba(255, 255, 255, 0.1)" }} action="#!">
-                  {/* <h1 className="text-center mt-2">Profile</h1> */}
-                  {/* <div className="container content-container my-4">
-          <div className="p-4 rounded-3 shadow-lg border border-dark" style={{ background:"rgba(255, 255, 255, 0.3)" }}> */}
+                 
                   {renderProfile()}
-                  {/* </div>
-        </div> */}
+
                 </div>
               </div>
             </div>

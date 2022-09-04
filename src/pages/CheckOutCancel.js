@@ -30,7 +30,7 @@ export default function CheckOutCancel() {
     <React.Fragment>
       <div classname=" mt-2">
       <h1 className="text-center mt-2">Transaction is cancelled.</h1>
-      <div className="textmid ">Redirecting you to Shopping Page in {countDown}</div>
+      <div className="textmid">Redirecting you to Shopping Page in {countDown}</div>
       </div>
     </React.Fragment>
   );

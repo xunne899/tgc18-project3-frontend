@@ -13,8 +13,7 @@ export default function CartProvider(props) {
   const navigate = useNavigate();
   // state
   const [cart, setCart] = useState([]);
-  // const [selection, setSelection] = useState({ variant_id: "", quantity: "" })
-  // const [tempVariant, setTempVariant] = useState({})
+
   const [checkoutResponse, setCheckoutResponse] = useState({});
   const [pageIsLoaded, setPageIsLoaded] = useState(true);
   const baseUrl = "https://project3-spice-sauce.herokuapp.com";
@@ -54,7 +53,6 @@ export default function CartProvider(props) {
           },
         });
 
-        // setCart(response.data.cartItems );
         if (response.data && response.data.cartItems) {
           if (response.data.cartItems.length > 1) {
             response.data.cartItems.sort((a, b) => {
@@ -107,10 +105,7 @@ export default function CartProvider(props) {
           { position: toast.POSITION.BOTTOM_RIGHT }
         );
         await getCart();
-        // setTempVariant({
-        //     ...tempVariant,
-        //     stock: tempVariant.stock - selection.quantity
-        // })
+
       } catch (err) {
         if (err.response.status === 403) {
           toast.error("Quantity exceeds stock available", {
@@ -219,7 +214,7 @@ export default function CartProvider(props) {
       navigate("/login");
     }
   };
-  // return cart provider
+
   return (
     <CartContext.Provider
       value={{
