@@ -7,6 +7,14 @@
 ![Web_view](./public/images/web_layout.png)
 
 ### References
+<br>
+Test Accounts for frontend react webpage customer login 
+
+ | Email              | Password  |
+ | -----------------  | --------- |
+ | testCust@gmail.com | 123       |
+
+<br>
 
 - Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/)
 
@@ -81,10 +89,10 @@ Webpage consists of simple 3 components
 
 Navbar is located at the top of webpage.<br>
 Navbar consists of logo, able to link to home page when on click and tab hyperlinks to respective pages.<br>
-Body consists of the Main picture, Display content, Home link, Add Item link, Browse Search item link <br>
-Footer at the bottom page with copyright and font aswesome logo.<br>
+Body consists of Carousel with 3 Main background Image, box in middle of background with shop now button<br>
+Footer at the bottom page with copyright consist of github linkdein, email logo.<br>
 
-<!-- ![Skeleton]() -->
+ ![Skeleton](./public/images/skeleton.png)
 
 ### 2.5 Surface
 
@@ -93,7 +101,7 @@ Footer at the bottom page with copyright and font aswesome logo.<br>
 - Background Colors: Mainly Black and white - To allow products to stand out capture viewers attention <br>
 - Button Colors : Black / Grey <br>
 
-<!-- ![Background Colours]() -->
+![Background Colours](./public/images/color.png)
 
 #### 2.5.b Typography<br>
 
@@ -134,9 +142,9 @@ Back-end (admin site)
 
 ## 4. User Stories
 
-1. User's are able to access the website with ease, able to view products make payment within few simple steps
-2. User's are able to browse their product requirement 
-3.
+1. User's are able to access the website with ease, able to view products add to cart and make payment within few simple steps
+2. User's are able to browse their product requirement at a quick glance
+3. Users are able to register and log in over few simple steps
 
 ### 4.1 Acceptance Criteria
 
@@ -152,9 +160,9 @@ Back-end (admin site)
 - db-migrate - migrate backend files 
 - Bookshelf- backend database
 - hbs - for backend file display 
-- knex
 - SQL- backend database
 - Express Node JS- Backend programming
+- knex
 - CORS
 - doteenv file
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
@@ -205,9 +213,9 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 [SweetAlert2](https://sweetalert2.github.io/)(alert box for successfully deleted and added)<br>
 [React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards ,modal)<br>
 [createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)><br>
-[freepik](https://www.freepik.com/)(web background images)
-[Google Fonts](https://fonts.google.com/)(webpage overall font-family)
-[Anthony the spice maker](https://www.anthonythespicemaker.com/)(spice picture in products and variants page)
+[freepik](https://www.freepik.com/)(web background images)<br>
+[Google Fonts](https://fonts.google.com/)(webpage overall font-family)<br>
+[Anthony the spice maker](https://www.anthonythespicemaker.com/)(spice picture in products and variants page)<br>
 [Stinky and Scorchy ](https://stinkyandscorchy.ie/?s=dr+trouble)(sauce picture in products and variants page)
 
 #### Mentors
