@@ -31,7 +31,6 @@ export default function NavBar() {
     } else {
       return (
         <Fragment>
-          {/* <div className="row  "> */}
           <div className="nav-item dropdown me-lg-3">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i className="bi bi-person-circle personIcon"></i>
@@ -44,19 +43,14 @@ export default function NavBar() {
                   </Link>
                 </a>
               </li>
-              {/* <div className="ms-auto d-flex justify-content-center me-lg-3"> */}
               <li>
                 <a className="dropdown-item" href="#">
                   <Link className=" nav-link " to="/cart">
-                    {/* <div className="cartWrap"> */}
                     {renderCartBadge()}
-                    {/* <i className="bi-basket2 basketIcon"></i> */}
                     Cart Item
-                    {/* </div> */}
                   </Link>
                 </a>
               </li>
-              {/* </div> */}
               <li>
                 <a className="dropdown-item" href="#">
                   <Link className="nav-link ms-lg-2" to="/order">
@@ -73,23 +67,7 @@ export default function NavBar() {
               </li>
             </div>
           </div>
-          {/* </div> */}
-          {/* <li className="nav-item">
-            <Link className="nav-link ms-lg-2" to="/order">
-              My Orders
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link ms-lg-2" to="/profile">
-              Profile
-            </Link>
-          </li>
 
-          <li className="nav-item">
-            <Link className="nav-link ms-lg-2 " to="/logout">
-              Logout
-            </Link>
-          </li>  */}
         </Fragment>
       );
     }
@@ -120,11 +98,6 @@ export default function NavBar() {
                   Home
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link className="nav-link ms-lg-2" to="/about">
-                  About
-                </Link>
-              </li> */}
               <li className="nav-item">
                 <Link className="nav-link ms-lg-2" to="/shop">
                   Shop
@@ -135,41 +108,11 @@ export default function NavBar() {
                   Contact
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link className="nav-link ms-lg-2" to="/profile">
-                  Profile
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link ms-lg-2 " to="/login">
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link ms-lg-2 " to="/logout">
-                  Logout
-                </Link>
-              </li> */}
-              {/* <li className="nav-item ">
-                <Link className="nav-link ms-lg-2" to="/cart">
-                <i className="bi-basket2 bi--lg"></i>
-                </Link>
-              </li> */}
               {renderLoginTabs()}
             </div>
-            {/* <div className="ms-auto d-flex justify-content-center me-lg-3">
-              <Link className="ms-lg-2" to="/cart">
-                <div className="cartWrap">
-                  {renderCartBadge()}
-                  <i className="bi-basket2 basketIcon"></i>
-                </div>
-              </Link>
-            </div> */}
           </div>
         </div>
       </nav>
-      {/* <HomePage/>  */}
-      {/* </div> */}
     </Fragment>
   );
 }
