@@ -27,7 +27,7 @@ export default function SearchForm(props) {
   return (
     <Fragment>
       <div className="accordion mt-5 mb-4" id="accordion">
-        <div className="accordion-item mx-lg-4 shadow-lg" >
+        <div className="accordion-item  shadow-lg" >
           <h2 className="accordion-header " id="headingOne">
             <button
               className="accordion-button collapsed"

@@ -51,7 +51,7 @@ export default function ProductListing() {
               // </li>
 
               //  if(p.type.type === "Spice"){
-              <Card key={`spice_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px",textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
+              <Card key={`spice_${i}`} className="m-3 border-0 shadow-lg gx-0 productCard" style={{ width: "18rem", marginBottom: "75px",textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
                 {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
                 <Card.Img variant="top" src={p.image_url} style={{ width: "cover" }} alt={""} />
                 <Card.Body style={{ height: "16.5rem" }}>
@@ -80,7 +80,7 @@ export default function ProductListing() {
             products.length > 0 &&
             //  products.type.type.value === 'spice' &&
             sauce.map((p, i) => (
-              <Card key={`sauce_${i}`} className="m-3 border-0 shadow-lg gx-0" style={{ width: "18rem", marginBottom: "75px", textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
+              <Card key={`sauce_${i}`} className="m-3 border-0 shadow-lg gx-0 productCard" style={{ width: "18rem", marginBottom: "75px", textDecoration:"none",color:"black" }} as={Link} to={`./${p.id}`}>
                 {/* <img src={p.image_url} style={{ width: "100%" }} alt={""}/> */}
                 <Card.Img variant="top" src={p.image_url} style={{ width: "cover" }} alt={""} />
                 <Card.Body style={{ height: "15rem" }}>
