@@ -51,11 +51,8 @@ export default function Profile() {
           <div className="profileInfo">
             <div className="d-flex">
               <div className="auto-margin-leftright profileWrapper">
-                <img className="profileImg" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
                 <div className="rounded-3 p-4 shadow-lg bg-light profileBox" style={{ width: "50vw", background: "rgba(255, 255, 255, 0.1)" }} action="#!">
-                 
                   {renderProfile()}
-
                 </div>
               </div>
             </div>
