@@ -7,12 +7,13 @@
 ![Web_view](./public/images/web_layout.png)
 
 ### References
-<br>
-Test Accounts for frontend react webpage customer login 
 
- | Email              | Password  |
- | -----------------  | --------- |
- | testCust@gmail.com | 123       |
+<br>
+Test Accounts for frontend react webpage customer login
+
+| Email              | Password |
+| ------------------ | -------- |
+| testCust@gmail.com | 123      |
 
 <br>
 
@@ -92,7 +93,7 @@ Navbar consists of logo, able to link to home page when on click and tab hyperli
 Body consists of Carousel with 3 Main background Image, box in middle of background with shop now button<br>
 Footer at the bottom page with copyright consist of github linkdein, email logo.<br>
 
- ![Skeleton](./public/images/skeleton.png)
+![Skeleton](./public/images/skeleton.png)
 
 ### 2.5 Surface
 
@@ -112,13 +113,13 @@ Footer at the bottom page with copyright consist of github linkdein, email logo.
 #### 2.5.c Images<br>
 
 - Images : Different images used for the main page
-- Website is able to view in mobile size (XS) ,  midsize view and large display like desktop
+- Website is able to view in mobile size (XS) , midsize view and large display like desktop
 
 #### 2.5.c Icons<br>
 
 - Icons are used in footer and navbar
-- Icons under footer are  linkedin github and email
-- Navbar person icon will be seen when  user log in  
+- Icons under footer are linkedin github and email
+- Navbar person icon will be seen when user log in
 
 ## 3. Features<br>
 
@@ -128,10 +129,10 @@ Front-end
 
 1. Able to show Products on the home page
 2. Customer able to register and log in
-2. Customer able to view products on site
-3. Customer able to Add, delete, update the cart items
-4. Checkout and make payment
-5. Payment success notification
+3. Customer able to view products on site
+4. Customer able to Add, delete, update the cart items
+5. Checkout and make payment
+6. Payment success notification
 
 Back-end (admin site)
 
@@ -157,9 +158,9 @@ Back-end (admin site)
 - CSS - styling, font size,form size, color
 - React- frontend programming
 - Axios - importing data, posting data, HTTP client to endpoint
-- db-migrate - migrate backend files 
+- db-migrate - migrate backend files
 - Bookshelf- backend database
-- hbs - for backend file display 
+- hbs - for backend file display
 - SQL- backend database
 - Express Node JS- Backend programming
 - knex
@@ -170,7 +171,7 @@ Back-end (admin site)
 - Canva - creating logo brand
 - SweetAlert2 - alert box for successfully deleted and added
 - Netlify - hosting live for frontend webpage project
-- Heroku - hosting live for  backend project
+- Heroku - hosting live for backend project
 - createmockup - readme file, sample of different view layout
 - Github & Gitpod - storing respositories/project
 
@@ -180,12 +181,12 @@ Back-end (admin site)
 
 #### PDF
 
-- Test case for each feature can be found [here]().
+- Test case for each feature can be found [here](./test_case.pdf).
 - Please download the file for better view
 
 #### Excel
 
-- Test case for each feature can be found [here]().
+- Test case for each feature can be found [here](./test_case.xlsx).
 - Please download the file for better view
 
 ### Mobile Responsiveness
