@@ -8,9 +8,11 @@
 
 ### References
 
-- Github frontend react interface please click [here]()
+- Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/)
 
-- Github backend database please click [here]()
+- Github frontend react interface please click [here](https://github.com/xunne899/tgc18-project3-frontend)
+
+- Github backend database please click [here](https://github.com/xunne899/tgc18-backend-project3)
 
 # Content
 
@@ -25,7 +27,7 @@
 
 ## 1. Summary
 
-- Some customers with religion or dietry constraints are not able to access to spices or sauces available to them
+- Customers with religion or dietry constraints are not able to access to spices or sauces available to them
 - In singapore i realised that there are not many e-commerce sauces and spice store cater to customers with dietry or religion constraints(eg. halal and vegan). As a owner of this project i would like to come up with an e-commerce store which allows customers to enjoy the freedom of purchasing spices and sauces regardless of their dietry contraints or background
 
 ### ERD
@@ -46,9 +48,9 @@ The purpose of this project is to let public, mainly millennials young adults (2
 
 - To create a e-commerce to allow customer's to purchase different spices and sauces from
   webpage
-- For frontend of website , Consumers are able to register and log in, adding items to cart and eventually check out to payment page. For backend admin site, business is able to manage the order and notify customers when the order is ready to dispatch.
+- For frontend of website , Consumers are able to register and log in, adding items to cart and eventually check out to payment page. For backend admin site, Owner or company staff is able to manage the order and update status of products,notify customers when the order is ready to dispatch.
 
-- Allowing Owner's to add, edit,update, upload image and delete the spices and sauces in the admin backend
+- Allowing Owner's to add, edit,update, upload image,manage order update status and delete the spices and sauces in the admin backend
 
 #### 2.2.a. User Goals
 
@@ -88,26 +90,27 @@ Footer at the bottom page with copyright and font aswesome logo.<br>
 
 #### 2.5.a Background<br>
 
-- Background Colors: To promote a clean neat look which enable products to stand out<br>
-- Button Colors :<br>
+- Background Colors: Mainly Black and white - To allow products to stand out capture viewers attention <br>
+- Button Colors : Black / Grey <br>
 
 <!-- ![Background Colours]() -->
 
 #### 2.5.b Typography<br>
 
-- Font Color :
-- Font Family:
-- Font Size : 0.6 - 4 rem, h1 to h5 to match with background settings
+- Font Color :Black
+- Font Family:'ZCOOL XiaoWei', serif
+- Font Size : 0.6 - 4 rem, vh, wh, px, h1 to h5 for headings to match with background settings
 
 #### 2.5.c Images<br>
 
 - Images : Different images used for the main page
-- Website is able to view in mobile size (XS) and for large display like desktop
+- Website is able to view in mobile size (XS) ,  midsize view and large display like desktop
 
 #### 2.5.c Icons<br>
 
-- Icons are used to differentiate the types of page
--
+- Icons are used in footer and navbar
+- Icons under footer are  linkedin github and email
+- Navbar person icon will be seen when  user log in  
 
 ## 3. Features<br>
 
@@ -117,7 +120,8 @@ Front-end
 
 1. Able to show Products on the home page
 2. Customer able to register and log in
-3. Customer able to Add, delete, update the cart
+2. Customer able to view products on site
+3. Customer able to Add, delete, update the cart items
 4. Checkout and make payment
 5. Payment success notification
 
@@ -126,11 +130,12 @@ Back-end (admin site)
 1. Admin/Staff/Owner able to log in/register
 2. Able to Create, update, delete products at the backend side
 3. Able to Process and Manage order
+4. Able to manage admin profile
 
 ## 4. User Stories
 
-1.
-2.
+1. User's are able to access the website with ease, able to view products make payment within few simple steps
+2. User's are able to browse their product requirement 
 3.
 
 ### 4.1 Acceptance Criteria
@@ -144,18 +149,20 @@ Back-end (admin site)
 - CSS - styling, font size,form size, color
 - React- frontend programming
 - Axios - importing data, posting data, HTTP client to endpoint
+- db-migrate - migrate backend files 
 - Bookshelf- backend database
+- hbs - for backend file display 
+- knex
 - SQL- backend database
 - Express Node JS- Backend programming
 - CORS
-- doteenv
+- doteenv file
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
 - React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
 - Canva - creating logo brand
-- CSS loaders - loading logo for browse and collection page
 - SweetAlert2 - alert box for successfully deleted and added
-- Netlify - hosting my webpage project
-- Heroku - hosting backend project
+- Netlify - hosting live for frontend webpage project
+- Heroku - hosting live for  backend project
 - createmockup - readme file, sample of different view layout
 - Github & Gitpod - storing respositories/project
 
@@ -165,12 +172,12 @@ Back-end (admin site)
 
 #### PDF
 
-- Test case for each feature and its functionality can be found [here]().
+- Test case for each feature can be found [here]().
 - Please download the file for better view
 
 #### Excel
 
-- Test case for each feature and its functionality can be found [here]().
+- Test case for each feature can be found [here]().
 - Please download the file for better view
 
 ### Mobile Responsiveness
@@ -180,9 +187,9 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 ## 7. Live Deployment
 
 - Deployment is through Netlify for react frontend<br>
-  Link of live Netlify deployment can be found [here]()
+  Link of live Netlify deployment can be found [here](https://solely-spice.netlify.app/)
 - Deployment is through heroku for backend database<br>
-  Link of live HEROKU deployment can be found [here]()
+  Link of live HEROKU deployment can be found [here](https://project3-spice-sauce.herokuapp.com/login)
 
 ## 8. Credits and Acknowledgement
 
@@ -190,17 +197,18 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 
 #### Web Source
 
-[Flaticon](https://www.flaticon.com/)(home page, delete icons for my project)<br>
 [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)( features, listgroups,web features) <br>
 [color-hex.com](https://www.color-hex.com/color/)(background color scheme png in readme file)<br>
-[fontawesome.com](https://fontawesome.com/v5/icons/)(use of twitter, whatsapp, facebook, instagram icon for footer)<br>
 [Canva](https://www.canva.com)(creating logo brand)<br>
-[CSS loaders](https://cssloaders.github.io/)(loading logo for browse and collection page)<br>
-
-<!-- [SweetAlert2](https://sweetalert2.github.io/)(alert box for successfully deleted and added)<br> -->
-
+[Cart2](https://icons.getbootstrap.com/icons/cart2/)(cart icon)<br>
+[getbootstrapicon](https://icons.getbootstrap.com/icons/)(font awesome github, email, linkedin,for footer and user navbar login person icon)<br>
+[SweetAlert2](https://sweetalert2.github.io/)(alert box for successfully deleted and added)<br>
 [React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards ,modal)<br>
-[createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)
+[createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)><br>
+[freepik](https://www.freepik.com/)(web background images)
+[Google Fonts](https://fonts.google.com/)(webpage overall font-family)
+[Anthony the spice maker](https://www.anthonythespicemaker.com/)(spice picture in products and variants page)
+[Stinky and Scorchy ](https://stinkyandscorchy.ie/?s=dr+trouble)(sauce picture in products and variants page)
 
 #### Mentors
 
