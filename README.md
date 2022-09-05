@@ -87,11 +87,11 @@ Webpage consists of simple 3 components
 - Body
 - Footer
 
-Navbar is located at the top of webpage.<br>
-Navbar consists of logo, able to link to home page when on click and other tab hyperlinks to respective pages.<br>
-Login user (Navbar Login) will then able to view tabs like profile, cart items, orders, logout<br>
-Body consists of Carousel with 3 Main background Image, box in middle of background with shop now button<br>
-Footer at the bottom page with copyright consist of github linkedin, email logo.<br>
+1. Navbar is located at the top of webpage.<br>
+2. Navbar consists of logo, able to link to home page when on click and other tab hyperlinks to respective pages.<br>
+3. Login user (Navbar Login) will then able to view tabs like profile, cart items, orders, logout<br>
+4. Body consists of Carousel with 3 Main background Image, box in middle of background with shop now button<br>
+5. Footer at the bottom page with copyright consist of github linkedin, email logo.<br>
 
 ![Skeleton](./public/images/skeleton.png)
 
