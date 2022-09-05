@@ -36,7 +36,7 @@ Test Accounts for frontend react webpage customer login
 
 ## 1. Summary
 
-- Customers with religion or dietry constraints are not able to access to spices or sauces available to them
+- Customers with religion or dietry constraints are not able to access easily to spices or sauces available to them at times
 - In singapore i realised that there are not many e-commerce sauces and spice store cater to customers with dietry or religion constraints(eg. halal and vegan). As a owner of this project i would like to come up with an e-commerce store which allows customers to enjoy the freedom of purchasing spices and sauces regardless of their dietry contraints or background
 
 ### ERD
@@ -57,16 +57,15 @@ The purpose of this project is to let public, mainly millennials young adults (2
 
 - To create a e-commerce to allow customer's to purchase different spices and sauces from
   webpage
-- For frontend of website , Consumers are able to register and log in, adding items to cart and eventually check out to payment page. For backend admin site, Owner or company staff is able to manage the order and update status of products,notify customers when the order is ready to dispatch.
-
-- Allowing Owner's to add, edit,update, upload image,manage order update status and delete the spices and sauces in the admin backend
+- For frontend of website , Consumers are able to register and log in, adding items to cart and eventually check out to payment page. For backend admin site, Owner or company staff is able to manage the order and update status of products, notify customers when the order is ready to dispatch.
+- Allowing Owner to add, edit, update, upload image, manage order update status and delete the spices and sauces in the admin backend website
 
 #### 2.2.a. User Goals
 
 - Targeted Audience: Millennials young adults (21 years) to (45 years)
 - Users are able to find their desired spices and sauces
 - Interface of the website is user friendly, users able to login, navigate to their products with ease
-- Users are able to obtain ingredients information of the sauces and spices they are purchasing
+- Users are able to obtain ingredients and other information of the sauces and spices they are purchasing quickly
 
 #### 2.2.b. Organisation's Goals
 
@@ -89,9 +88,10 @@ Webpage consists of simple 3 components
 - Footer
 
 Navbar is located at the top of webpage.<br>
-Navbar consists of logo, able to link to home page when on click and tab hyperlinks to respective pages.<br>
+Navbar consists of logo, able to link to home page when on click and other tab hyperlinks to respective pages.<br>
+Login user (Navbar Login) will then able to view tabs like profile, cart items, orders, logout<br>
 Body consists of Carousel with 3 Main background Image, box in middle of background with shop now button<br>
-Footer at the bottom page with copyright consist of github linkdein, email logo.<br>
+Footer at the bottom page with copyright consist of github linkedin, email logo.<br>
 
 ![Skeleton](./public/images/skeleton.png)
 
@@ -106,14 +106,14 @@ Footer at the bottom page with copyright consist of github linkdein, email logo.
 
 #### 2.5.b Typography<br>
 
-- Font Color :Black
-- Font Family:'ZCOOL XiaoWei', serif
+- Font Color : Black
+- Font Family :'ZCOOL XiaoWei', serif
 - Font Size : 0.6 - 4 rem, vh, wh, px, h1 to h5 for headings to match with background settings
 
 #### 2.5.c Images<br>
 
 - Images : Different images used for the main page
-- Website is able to view in mobile size (XS) , midsize view and large display like desktop
+- Website is able to view in mobile size (XS), midsize view and large display like desktop
 
 #### 2.5.c Icons<br>
 
@@ -144,13 +144,16 @@ Back-end (admin site)
 ## 4. User Stories
 
 1. User's are able to access the website with ease, able to view products add to cart and make payment within few simple steps
-2. User's are able to browse their product requirement at a quick glance
-3. Users are able to register and log in over few simple steps
+2. User's are able to browse their product details and at a quick glance
+3. User's are able to register and log in over few simple steps
+4. User's are able to view order item details, receipt easily and within a few clicks
 
 ### 4.1 Acceptance Criteria
 
-1. Webpage allows user's to search for their desire sauces and spices<br>
-2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their item with ease
+1. Webpage products description layout able to capture user's attention <br>
+2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their item with ease<br>
+3. Webpage allows user to purchase their item, checkout within a few steps<br>
+4. Allows user to view products and ordered items detail eg. payment method, address, order id, order status, shipping method and receipt
 
 ## 5. Technologies Used
 
@@ -163,7 +166,7 @@ Back-end (admin site)
 - hbs - for backend file display
 - SQL- backend database
 - Express Node JS- Backend programming
-- DB Beaver , postgress - store backend data after live deployment
+- DB Beaver, postgress - store backend data after live deployment
 - knex
 - CORS
 - doteenv file
