@@ -123,9 +123,9 @@ Webpage consists of simple 3 components
 
 #### 2.5.c Icons<br>
 
-- Icons are used in footer and navbar
-- Icons under footer are linkedin github and email
-- Navbar person icon will be seen when user log in
+- Icons are used in footer and navbar (white icons are used to contrast black background)
+- Icons under footer are linkedin github and email (white icons are used to contrast black background)
+- Navbar person icon will be seen when user log in (white icons are used to contrast black background)
 
 ## 3. Features<br>
 
