@@ -163,6 +163,7 @@ Back-end (admin site)
 - hbs - for backend file display
 - SQL- backend database
 - Express Node JS- Backend programming
+- DB Beaver , postgress - store backend data after live deployment
 - knex
 - CORS
 - doteenv file
@@ -217,7 +218,11 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 [freepik](https://www.freepik.com/)(web background images)<br>
 [Google Fonts](https://fonts.google.com/)(webpage overall font-family)<br>
 [Anthony the spice maker](https://www.anthonythespicemaker.com/)(spice picture in products and variants page)<br>
-[Stinky and Scorchy ](https://stinkyandscorchy.ie/?s=dr+trouble)(sauce picture in products and variants page)
+[Stinky and Scorchy ](https://stinkyandscorchy.ie/?s=dr+trouble)(sauce picture in products and variants page)<br>
+[DB Beaver](https://dbeaver.io/)(store backend data after deployment)<br>
+[Postgress](https://www.postgresql.org/)(store backend data after deployment)<br>
+[GitHub](https://github.com/)(commit and store workspace)<br>
+[GitPod](https://gitpod.io/workspaces)(commit and store workspace)<br>
 
 #### Mentors
 
