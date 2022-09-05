@@ -151,9 +151,9 @@ Back-end (admin site)
 ## 4. User Stories
 
 1. User's are able to access the website with ease, able to view products, add to cart and make payment within few simple steps
-2. User's are able to browse their product details and at a quick glance
+2. User's are able to browse their products and product details at a quick glance
 3. User's are able to register and log in over few simple steps
-4. User's are able to view order item details, receipt easily and within a few clicks
+4. User's are able to view order item details, receipt easily within a few clicks
 5. User's are able to update quantity, delete cart item in shopping cart 
 
 ### 4.1 Acceptance Criteria
