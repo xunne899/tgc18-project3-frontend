@@ -14,7 +14,6 @@
 | ------------------ | -------- |
 | testCust@gmail.com | 123      |
 
-<br>
 
 - Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/)
 
