@@ -157,26 +157,34 @@ Back-end (admin site)
 
 ## 5. Technologies Used
 
+### FrontEnd
+
 - HTML - styling, font size,form size, color
 - CSS - styling, font size,form size, color
 - React- frontend programming
 - Axios - importing data, posting data, HTTP client to endpoint
+- Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
+- React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
+- Canva - creating logo brand
+- Netlify - hosting live for frontend webpage project
+- createmockup - readme file, sample of different view layout
+- Github & Gitpod - storing respositories/project
+
+### Backend
+
+- knex
+- CORS
+- doteenv file
 - db-migrate - migrate backend files
 - Bookshelf- backend database
 - hbs - for backend file display
 - SQL- backend database
 - Express Node JS- Backend programming
 - DB Beaver, postgress - store backend data after live deployment
-- knex
-- CORS
-- doteenv file
+- SweetAlert2 - alert box for successfully deleted and added
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
 - React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
-- Canva - creating logo brand
-- SweetAlert2 - alert box for successfully deleted and added
-- Netlify - hosting live for frontend webpage project
 - Heroku - hosting live for backend project
-- createmockup - readme file, sample of different view layout
 - Github & Gitpod - storing respositories/project
 
 ## 6. Testing
@@ -201,8 +209,37 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 
 - Deployment is through Netlify for react frontend<br>
   Link of live Netlify deployment can be found [here](https://solely-spice.netlify.app/)
+
 - Deployment is through heroku for backend database<br>
   Link of live HEROKU deployment can be found [here](https://project3-spice-sauce.herokuapp.com/login)
+
+
+### Backend Environment Variables
+
+#### This project makes use of the environment variables as shown below:
+```
+DB_DRIVER=
+DB_USER=
+DB_PASSWORD=
+DB_DATABASE=
+DB_HOST=
+
+CLOUDINARY_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+CLOUDINARY_UPLOAD_PRESET=
+
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_SUCCESS_URL=
+STRIPE_CANCELLED_URL=
+STRIPE_ENDPOINT_SECRET=
+
+SESSION_SECRET_KEY=
+
+TOKEN_SECRET=
+REFRESH_TOKEN_SECRET=
+```
 
 ## 8. Credits and Acknowledgement
 
