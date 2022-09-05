@@ -159,7 +159,7 @@ Back-end (admin site)
 
 1. Webpage products description layout able to capture user's attention <br>
 2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their item with ease<br>
-3. Webpage allows user to purchase their item, checkout within a few steps<br>
+3. Webpage allows user to select their item, checkout and make payment purchases within a few steps<br>
 4. Allows user to view products and ordered items detail eg. payment method, address, order id, order status, shipping method and receipt
 
 ## 5. Technologies Used
