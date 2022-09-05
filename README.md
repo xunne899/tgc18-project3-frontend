@@ -14,8 +14,16 @@
 | ------------------ | -------- |
 | testCust@gmail.com | 123      |
 
+### Test Account (Backend admin)
+
+| Email              | Password |
+| ------------------ | -------- |
+| test@gmail.com     | 123      |
+
 
 - Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/)
+
+- Demo of backend deployment can be found [here](https://project3-spice-sauce.herokuapp.com/login)
 
 - Github frontend react interface please click [here](https://github.com/xunne899/tgc18-project3-frontend)
 
