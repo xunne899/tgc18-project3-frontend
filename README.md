@@ -1,4 +1,4 @@
-# tgc18-project3-frontend
+# tgc18-project3-frontend-SolelySpice
 
 - Objective: Create a sauces and spices e-commerce website for customers with different background or dietry constraint
 
