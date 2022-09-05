@@ -128,18 +128,18 @@ Webpage consists of simple 3 components
 Front-end
 
 1. Able to show Products on the home page
-2. Customer able to register and log in
-3. Customer able to view products on site
-4. Customer able to Add, delete, update the cart items
+2. Customers able to register and log in
+3. Customers able to view products on site
+4. Customers able to Add, delete, update the cart items
 5. Checkout and make payment
 6. Payment success notification
 
 Back-end (admin site)
 
 1. Admin/Staff/Owner able to log in/register new account
-2. Able to Search products
+2. Able to search products
 3. Create(add), update, delete products and variants at the backend side
-4. Able to Search, update order status for orders
+4. Able to search, update order status for orders
 5. Able to manage admin profile, delete and update
 
 ## 4. User Stories
