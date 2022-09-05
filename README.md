@@ -138,7 +138,7 @@ Back-end (admin site)
 
 1. Admin/Staff/Owner able to log in/register new account
 2. Able to search products
-3. Create(add), update, delete products and variants at the backend side
+3. Create(add), update, delete products and variants on the backend side
 4. Able to search, update order status for orders
 5. Able to manage admin profile, delete and update
 
