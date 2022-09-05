@@ -136,10 +136,11 @@ Front-end
 
 Back-end (admin site)
 
-1. Admin/Staff/Owner able to log in/register
-2. Able to Create, update, delete products at the backend side
-3. Able to Process and Manage order
-4. Able to manage admin profile
+1. Admin/Staff/Owner able to log in/register new account
+2. Able to Search products
+3. Create(add), update, delete products and variants at the backend side
+4. Able to Search, update order status for orders
+5. Able to manage admin profile, delete and update
 
 ## 4. User Stories
 
@@ -159,6 +160,7 @@ Back-end (admin site)
 
 ### FrontEnd
 
+- dotenv file
 - HTML - styling, font size,form size, color
 - CSS - styling, font size,form size, color
 - React- frontend programming
@@ -213,10 +215,10 @@ Responsiveness testing was done on Small handphones SE, Tablet, General Desktop 
 - Deployment is through heroku for backend database<br>
   Link of live HEROKU deployment can be found [here](https://project3-spice-sauce.herokuapp.com/login)
 
-
 ### Backend Environment Variables
 
 #### This project makes use of the environment variables as shown below:
+
 ```
 DB_DRIVER=
 DB_USER=
