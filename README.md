@@ -6,9 +6,9 @@
 
 ![Web_view](./public/images/web_layout.png)
 
-## References
+# References
 
-### Test Account (Frontend react webpage customer login）
+## Test Account (Frontend React Customer Login）
 
 | Email              | Password |
 | ------------------ | -------- |
