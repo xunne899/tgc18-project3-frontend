@@ -118,7 +118,7 @@ Webpage consists of simple 3 components
 
 #### 2.5.c Images<br>
 
-- Images : Different images used for the main page
+- Images : Different spice images are used for the project main page/profile/contact us page to fit the project spice_sauce theme
 - Website is able to view in mobile size (XS), midsize view and large display like desktop
 
 #### 2.5.c Icons<br>
