@@ -21,7 +21,7 @@
 | test@gmail.com     | 123      |
 
 
-- Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/)
+- Demo of frontend web application can be accessed [here](https://solely-spice.netlify.app/login)
 
 - Demo of backend deployment can be found [here](https://project3-spice-sauce.herokuapp.com/login)
 
