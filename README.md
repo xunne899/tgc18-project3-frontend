@@ -177,7 +177,7 @@ Back-end (admin site)
 
 ### FrontEnd
 
-- dotenv file
+- dotenv - store web socket
 - HTML - styling, font size,form size, color
 - CSS - styling, font size,form size, color
 - React- frontend programming
@@ -191,11 +191,18 @@ Back-end (admin site)
 
 ### Backend
 
-- knex
-- CORS
-- doteenv file
+- flash-sessions - using middleware display flash messsages
+- csurf - Cross-Site Request Forgery (CSRF) protection
+- wax-on - template inheritance using block, extend hbs
+- handlebar-helpers - handlebar-helpers
+- cloudinary - external supporting  widget for image uploading
+- caolan forms - validate and create forms
+- knex - MySQL Query builder
+- CORS - share access, Cross-Origin Resource Sharing 
+- doteenv - loading of environment variables
 - db-migrate - migrate backend files
-- Bookshelf- backend database
+- json web token - frontend authentication purposes
+- bookshelf- backend SQL database ORM
 - hbs - for backend file display
 - SQL- backend database
 - Express Node JS- Backend programming
