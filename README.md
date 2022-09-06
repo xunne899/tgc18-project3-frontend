@@ -182,6 +182,7 @@ Back-end (admin site)
 - CSS - styling, font size,form size, color
 - React- frontend programming
 - Axios - importing data, posting data, HTTP client to endpoint
+- stripe - payment access gateway
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
 - React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
 - Canva - creating logo brand
@@ -201,7 +202,7 @@ Back-end (admin site)
 - CORS - share access, Cross-Origin Resource Sharing 
 - doteenv - loading of environment variables
 - db-migrate - migrate backend files
-- json web token - frontend authentication purposes
+- json web token - authentication tools for frontend
 - bookshelf- backend SQL database ORM
 - hbs - for backend file display
 - SQL- backend database
