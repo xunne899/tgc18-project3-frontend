@@ -12,16 +12,16 @@
 
 ![Web_view](./public/images/frontendLogin.png)
 
+### BackEnd Login Layout View
+
+![Web_view](./public/images/backendLogin.png)
+
 ### Test Account (Frontend React Customer Login）
 
 | Email              | Password |
 | ------------------ | -------- |
 | testCust@gmail.com | 123      |
 
-
-### BackEnd Login Layout View
-
-![Web_view](./public/images/backendLogin.png)
 
 ### Test Account (Backend admin)
 
