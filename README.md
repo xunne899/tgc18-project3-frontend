@@ -8,11 +8,20 @@
 
 # References
 
+### FrontEnd Login Layout View
+
+![Web_view](./public/images/frontendLogin.png)
+
 ### Test Account (Frontend React Customer Login）
 
 | Email              | Password |
 | ------------------ | -------- |
 | testCust@gmail.com | 123      |
+
+
+### BackEnd Login Layout View
+
+![Web_view](./public/images/backendLogin.png)
 
 ### Test Account (Backend admin)
 
@@ -20,11 +29,11 @@
 | ------------------ | -------- |
 | test@gmail.com     | 123      |
 
-- Demo of frontend web application homepage can be accessed [here](https://solely-spice.netlify.app/)
+- Demo of frontend web application (homepage) can be accessed [here](https://solely-spice.netlify.app/)
 
-- Demo of frontend web application login page can be accessed [here](https://solely-spice.netlify.app/login)
+- Demo of frontend web application (login page) can be accessed [here](https://solely-spice.netlify.app/login)
 
-- Demo of backend deployment login page can be found [here](https://project3-spice-sauce.herokuapp.com/login)
+- Demo of backend deployment (login page) can be found [here](https://project3-spice-sauce.herokuapp.com/login)
 
 - Github frontend react interface please click [here](https://github.com/xunne899/tgc18-project3-frontend)
 
