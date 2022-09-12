@@ -24,7 +24,7 @@ export default function CartItem(props) {
     setQuantity(cartItem.quantity);
   }, [cart]);
 
-  // handle delete button
+
   const onDelete = async () => {
     await deleteCartItem(cartItem.variant.id);
     await getCart();
@@ -42,24 +42,24 @@ export default function CartItem(props) {
 
   };
 
-  // return jsx
+
   return (
     <div className="card rounded-3 mb-4 align-self-center">
       <div className="card-body p-4">
         <div className="row d-flex justify-content-between align-items-center">
           <div className="col-md-2 col-lg-2 col-xl-2">
-            <img src={cartItem.variant.image_url} className="img-fluid rounded-3" alt={cartItem.variant.product.name} />
+            <img src={cartItem.variant.image_url} className="img-fluid rounded-3 mb-2" alt={cartItem.variant.product.name} />
           </div>
           <div className="col-md-3 col-lg-3 col-xl-3 mb-2 mb-md-0">
-            <p className="lead fw-normal mb-2">
+            <h4>
               <Link className="text-dark" to={"/shop/" + cartItem.variant.product.id}>
                 {cartItem.variant.product.name}
               </Link>
-            </p>
-            <span className="text-muted">Size: </span>
+            </h4>
+            <span >Size: </span>
             {cartItem.variant.size.size}
             <br />
-            <span className="text-muted">Cost: </span>S$ {(cartItem.variant.cost / 100).toFixed(2)}
+            <span>Cost: </span>S$ {(cartItem.variant.cost / 100).toFixed(2)}
           </div>
           <div className="col-md-3 col-lg-3 col-xl-2 mb-2 mb-md-0">
             <form onSubmit={onUpdateQuantity} className=" d-flex">
@@ -70,9 +70,9 @@ export default function CartItem(props) {
           <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1 mb-2 mb-md-0">
             <h5 className="mb-0">SGD {((cartItem.variant.cost * quantity) / 100).toFixed(2)}</h5>
           </div>
-          <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-            <a role="button" className="text-dark" onClick={() => onDelete(cartItem.variant.id)}>
-              <i className="bi bi-trash" style={{ fontSize: "1.5rem" }}></i>
+          <div className="col-md-1 col-lg-1 col-xl-1 text-right">
+            <a role="button" className="text-dark " onClick={() => onDelete(cartItem.variant.id)}>
+              <i className="bi bi-trash" style={{ fontSize: "1.6rem" }}></i>
             </a>
           </div>
         </div>
