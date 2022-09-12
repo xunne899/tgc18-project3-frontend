@@ -75,7 +75,7 @@ export default function NavBar() {
   return (
     <Fragment>
       {/* <div> */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand ms-3" href="#">
             <img id="navLogo" src={require("./images/newSpiceLogo.png")} style={{ width: "135px", height: "60px" }} />

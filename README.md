@@ -169,8 +169,8 @@ Back-end (admin site)
 ### 4.1 Acceptance Criteria
 
 1. Webpage products description layout able to capture user's attention <br>
-2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their item with ease<br>
-3. Webpage allows user to select their item, checkout and make payment purchases within a few steps<br>
+2. Webpage is user friendly enough, allowing customer's to navigate to register, login, search for their items with ease<br>
+3. Webpage allows user to select their items, checkout and make payment purchases within a few steps<br>
 4. Allows user to view products and ordered items detail eg. payment method, address, order id, order status, shipping method and receipt
 
 ## 5. Technologies Used
@@ -192,7 +192,7 @@ Back-end (admin site)
 
 ### Backend
 
-- flash-sessions - using middleware display flash messsages
+- flash-sessions - using middleware, displaying flash messsages
 - csurf - Cross-Site Request Forgery (CSRF) protection
 - wax-on - template inheritance using block, extend hbs
 - handlebar-helpers - handlebar-helpers
