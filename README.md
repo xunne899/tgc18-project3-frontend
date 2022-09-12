@@ -184,7 +184,7 @@ Back-end (admin site)
 - Axios - importing data, posting data, HTTP client to endpoint
 - stripe - payment access gateway
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
-- React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
+- React Boostrap 5.0 - accordian, cards, forms, col, rows
 - Canva - creating logo brand
 - Netlify - hosting live for frontend webpage project
 - createmockup - readme file, sample of different view layout
@@ -210,7 +210,7 @@ Back-end (admin site)
 - DB Beaver, postgress - store backend data after live deployment
 - SweetAlert2 - alert box for successfully deleted and added
 - Bootstrap - styling, sizing, aligning content, match its mobile responsiveness
-- React Boostrap 5.0 - accordian, cards ,modal, forms, col, rows
+- React Boostrap 5.0 - accordian, cards , forms, col, rows
 - Heroku - hosting live for backend project
 - Github & Gitpod - storing respositories/project
 
@@ -279,8 +279,8 @@ REFRESH_TOKEN_SECRET=
 [Canva](https://www.canva.com)(creating logo brand)<br>
 [Cart2](https://icons.getbootstrap.com/icons/cart2/)(cart icon)<br>
 [getbootstrapicon](https://icons.getbootstrap.com/icons/)(font awesome github, email, linkedin,for footer and user navbar login person icon)<br>
-[SweetAlert2](https://sweetalert2.github.io/)(alert box for successfully deleted and added)<br>
-[React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards ,modal)<br>
+[SweetAlert2](https://sweetalert2.github.io/)(alert box for successful deletion)<br>
+[React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards, forms)<br>
 [createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)><br>
 [freepik](https://www.freepik.com/)(web background images)<br>
 [Google Fonts](https://fonts.google.com/)(webpage overall font-family)<br>
