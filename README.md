@@ -278,7 +278,7 @@ REFRESH_TOKEN_SECRET=
 [color-hex.com](https://www.color-hex.com/color/)(background color scheme png in readme file)<br>
 [Canva](https://www.canva.com)(creating logo brand)<br>
 [Cart2](https://icons.getbootstrap.com/icons/cart2/)(cart icon)<br>
-[getbootstrapicon](https://icons.getbootstrap.com/icons/)(font awesome github, email, linkedin,for footer and user navbar login person icon)<br>
+[getbootstrapicon](https://icons.getbootstrap.com/icons/)(font awesome github, email, linkedin, for footer and user navbar login person icon)<br>
 [SweetAlert2](https://sweetalert2.github.io/)(alert box for successful deletion)<br>
 [React Bootstrap 5.0](https://react-bootstrap.github.io/)(accordian, cards, forms)<br>
 [createmockup](https://www.createmockup.com/generate/)(readme file desktop view layout)><br>
